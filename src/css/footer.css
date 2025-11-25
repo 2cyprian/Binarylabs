@@ -1,0 +1,427 @@
+/* --- Variables & Reset --- */
+
+/* --- Main Footer Styles --- */
+.footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 40px 15px 20px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+
+/* Small screen optimizations */
+@media (max-width: 991px) {
+    .footer {
+        padding: 30px 15px 15px;
+        font-size: 13px;
+    }
+    
+    /* Ensure container doesn't overflow */
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Layout Grid/Flex --- */
+.footer-content {
+    display: flex;
+    flex-direction: column; /* Mobile: Stack Vertically */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Base footer column styling */
+.footer-col {
+    flex: 1;
+}
+
+/* Mobile-specific footer content */
+@media (max-width: 991px) {
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 15px 20px;
+        margin-bottom: 25px;
+    }
+    
+    /* Left column: Logo, Address, Contacts, Social */
+    .footer-col.brand-col {
+        grid-column: 1;
+        grid-row: 1 / 3; /* Span both rows */
+    }
+    
+    /* Top right: Useful Links */
+    .footer-col.links-col {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    /* Bottom right: Working Hours */
+    .footer-col.hours-col {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+/* Titles */
+.footer h3 {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .footer h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+}
+
+/* --- Column 1: Brand & Info --- */
+.footer-logo {
+    width: 50px;
+    height: 55px;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 991px) {
+    .footer-logo {
+        width: 40px;
+        height: 45px;
+        margin-bottom: 15px;
+    }
+}
+    
+
+/* CSS-only Logo Shield (Replace with <img> if you have file) */
+
+
+.info-group { 
+    margin-bottom: 20px; 
+}
+
+.info-group p { 
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+@media (max-width: 991px) {
+    .info-group {
+        margin-bottom: 15px;
+    }
+    
+    .info-group p {
+        font-size: 13px;
+    }
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: var(--white);
+    background: rgba(255,255,255,0.1);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--accent);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    .social-icons {
+        gap: 12px;
+        margin-top: 15px;
+        display: flex;
+    }
+    
+    .social-icons a {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* --- Column 2: Links --- */
+.links-col ul { 
+    list-style: none;
+    padding: 0;
+}
+
+.links-col li { 
+    margin-bottom: 12px; 
+}
+
+.links-col a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 5px 0;
+    text-decoration: underline;
+    text-decoration-color: rgba(255,255,255,0.7);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+}
+
+.links-col a:hover {
+    color: var(--accent);
+    padding-left: 5px;
+}
+
+@media (max-width: 991px) {
+    .links-col {
+     /* keep the list stacked vertically */
+     width: 90%;
+        margin-right: auto;
+        padding-right: 10px;
+    }
+
+    .links-col a {
+        display: block;
+        white-space: nowrap;       /* prevent wrapping — keep link on a single row */
+        overflow: hidden;
+        text-overflow: ellipsis;  /* truncate long links with ellipsis */
+    }
+    
+    .links-col li {
+        margin-top: 12px;
+        margin-bottom: 8px;
+        display: inline-block;
+        vertical-align: top;
+        
+
+        
+    }
+    
+    .links-col a {
+        font-size: 10px;
+        padding: 2px 0;
+        
+    }
+    
+    .hours-col {
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+}
+
+/* --- Column 3: Hours --- */
+.hour-group { 
+    margin-bottom: 20px; 
+}
+
+.hour-group .day {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--accent);
+}
+
+.hour-group .time {
+    color: var(--white);
+    display: block;
+}
+
+.red-text { 
+    color: var(--accent); 
+}
+
+@media (max-width: 999px) {
+    .hour-group {
+        margin-bottom: 15px;
+    }
+    
+    .hour-group .day,
+    .hour-group .time {
+        font-size: 13px;
+    }
+}
+
+/* --- Footer Bottom (Copyright) --- */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.copyright p {
+    color: var(--white);
+    margin: 0;
+}
+
+.policy-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.policy-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+
+.policy-links a:hover { 
+    color: var(--white); 
+}
+
+@media (max-width: 991px) {
+    .footer-bottom {
+        padding-top: 20px;
+        gap: 12px;
+    }
+    
+    .policy-links {
+        gap: 15px;
+    }
+    
+    .policy-links a {
+        font-size: 12px;
+    }
+    
+    .copyright p {
+        font-size: 12px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 5px 5px;
+        font-size: 12px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 2fr;
+        grid-template-rows: auto auto auto;
+        gap: 10px;
+    }
+    
+    .footer-col.brand-col {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .footer-col.links-col {
+        grid-column: 1;
+        grid-row: 2;
+        padding-right: 0;
+    }
+    
+    .footer-col.hours-col {
+        grid-column: 1;
+        grid-row: 3;
+        padding-right: 0;
+        padding-top: 0;
+    }
+    
+    .footer h3 {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .social-icons {
+        justify-content: flex-start;
+    }
+}
+
+/* Very small screens - reduce all font sizes */
+@media (max-width: 412px) {
+    .footer {
+        font-size: 11px;
+    }
+    
+    .footer h3 {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+     .info-group h3{
+        font-size: 12px;
+     }
+    .info-group p {
+        font-size: 8px;
+    }
+    
+    .links-col a {
+        font-size: 11px;
+    }
+    
+    .hour-group .day,
+    .hour-group .time {
+        font-size: 10px;
+        margin-bottom: 0;
+    }
+    
+    /* Footer bottom - same arrangement as 991px */
+    .footer-bottom {
+        padding-top: 20px;
+        gap: 12px;
+    }
+    
+    .policy-links {
+        gap: 15px;
+    }
+    
+    .policy-links a {
+        font-size: 10px;
+    }
+    
+    .copyright p {
+        font-size: 10px;
+    }
+}
+
+/* =========================================
+   DESKTOP VIEW (Large Screens)
+   ========================================= */
+@media (min-width: 992px) {
+    /* Switch main layout to Grid */
+    .footer-content {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr; /* Col 1 is slightly wider */
+        gap: 60px;
+    }
+
+    /* Adjust bottom bar to be horizontal */
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}

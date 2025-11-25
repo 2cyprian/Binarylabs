@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubCode Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/src/css/navbar.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            
+            <!-- 1. START: Logo -->
+            <a href="#" class="nav-logo">
+               <img src="/assets//binarylogo.png" alt="">
+            </a>
+
+            <!-- Mobile Toggle Button (Hidden on Desktop) -->
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- 2. MIDDLE & END (Grouped for Mobile Slide-out) -->
+            <div class="nav-collapse">
+                
+                <!-- Middle: Links -->
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Engineering Skills</a></li>
+                    <li><a href="#">Binary Labs</a></li>
+                    <li class="nav-btn-wrapper">
+                    <a href="#join" class="btn-nav-cta">Join Our Cohort</a>
+                    </li>
+                </ul>
+
+                <!-- 3. END: CTA Button -->
+                
+            </div>
+
+            <!-- Mobile Overlay (Dark background when menu is open) -->
+            <div class="mobile-overlay"></div>
+
+        </div>
+    </header>
+
+    <script src="/src/js/component/navbar.js"></script>
+</body>
+</html>

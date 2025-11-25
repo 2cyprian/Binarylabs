@@ -1,0 +1,42 @@
+:root {
+  --primary: #182638;
+  --accent: #B60000;
+  --text:#FF0000;
+  --white:#ffffff;
+  --font-family: 'Segoe UI', Arial, sans-serif;
+  --border-radius: 8px;
+  --navbar-height: 80px;
+}
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  background: #f8f9fa;
+  color: var(--primary);
+}
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Ensure navbar is fixed and content starts below it */
+#navbar,
+.navbar-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  min-height: var(--navbar-height);
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Push main content below fixed navbar */
+main {
+  margin-top: 50px;
+}
+
+/* Ensure hero sections have proper spacing */
+.hero {
+  margin-top: 0;
+}

@@ -1,0 +1,35 @@
+// Component loader utility
+export async function loadComponent(selector, componentPath) {
+  const element = document.querySelector(selector);
+  if (!element) {
+    console.warn(`Element ${selector} not found`);
+    return;
+  }
+  
+  try {
+    const response = await fetch(componentPath);
+    if (!response.ok) {
+      throw new Error(`Failed to load ${componentPath}: ${response.status}`);
+    }
+    const html = await response.text();
+    element.innerHTML = html;
+  } catch (error) {
+    console.error('Error loading component:', error);
+  }
+}
+
+// Load all common components
+export async function initializeComponents() {
+  await Promise.all([
+    loadComponent('#navbar', '/src/components/navbar.html'),
+    loadComponent('#footer', '/src/components/footer.html'),
+    loadComponent('#hero', '/src/components/hero.html')
+  ]);
+}
+
+// Auto-initialize when DOM is loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeComponents);
+} else {
+  initializeComponents();
+}
