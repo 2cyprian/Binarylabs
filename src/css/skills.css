@@ -42,11 +42,11 @@
 
 
 
-.card img{
+.overview-item img{
     width: 45px;
     height: 45px;
-    margin-top: 0.5rem;
-    justify-self: center;
+    margin: 0.5rem;
+    justify-content: flex-end;
     
 }
 
@@ -86,6 +86,20 @@
     
     border: 2px solid #fff;
     box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+}
+.overview-link{
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+@media (max-width: 1200px){
+    .overview-content{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 
