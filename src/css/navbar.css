@@ -60,8 +60,8 @@ body { font-family: 'Poppins', sans-serif; }
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
-    margin: 0 auto; /* This centers the links block */
+    gap: 20px;
+    
 }
 
 .nav-links a {
@@ -72,8 +72,7 @@ body { font-family: 'Poppins', sans-serif; }
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover{
     color: var(--accent);
 }
 
@@ -93,9 +92,11 @@ body { font-family: 'Poppins', sans-serif; }
 .btn-nav-cta:hover {
     transform: translateY(-2px) scale(1.05);
     
+    
 }
 .nav-btn-wrapper {
-    margin-left: auto; /* Push to the right edge */
+    width: 186px;
+    height: auto;
 }
 /* --- MOBILE TOGGLE --- */
 .mobile-menu-btn {
@@ -126,7 +127,7 @@ body { font-family: 'Poppins', sans-serif; }
    ========================================= */
 @media (max-width: 992px) {
     .mobile-menu-btn {
-        display: block;
+        display:block;
     }
     
 
@@ -142,7 +143,7 @@ body { font-family: 'Poppins', sans-serif; }
         align-items: flex-start;
         padding: 30px 20px;
         transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1003;
+        /* z-index: 1003; */
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         visibility: hidden;
     }
@@ -159,8 +160,8 @@ body { font-family: 'Poppins', sans-serif; }
         flex-direction: column;
         margin: 0; /* Remove centering margin */
         gap: 25px;
-        margin-bottom: 50px;
-        padding: 10%;
+        margin-bottom: 10px;
+        padding: 20px ;
         border: 2px solid hsla(8, 100%, 59%,0.4);
         width: 100%;
     
@@ -171,13 +172,13 @@ body { font-family: 'Poppins', sans-serif; }
     .nav-links a {
         font-size: 18px;
         display: block;
-        padding-bottom: 10px;
         border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .nav-btn-wrapper {
-            margin-bottom: 10px;
-            margin-left: 0;
+            border-radius: 26px;
+            border: 2px solid var(--text);
+            
             
                 
     
@@ -185,8 +186,9 @@ body { font-family: 'Poppins', sans-serif; }
 
     .btn-nav-cta {
          text-align: center;
-        width: 100%;
-        padding: 14px;
+         padding: 10px;
+         border: none;
+         
     ;
     }
 

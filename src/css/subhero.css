@@ -1,0 +1,124 @@
+/* --- Variables --- */
+/* --- Section Layout --- */
+.sub-hero-section {
+    padding: 80px 20px;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.sub-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Side-by-side layout */
+    gap: 60px;
+    align-items: center;
+}
+
+/* --- Left Side: Text --- */
+.sub-hero-text h2 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: var(--primary);
+
+}
+
+.sub-hero-text .highlight {
+        background-color:var(--text);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+}
+
+.sub-hero-text p {
+    font-size: 16px;
+    color: var(--primary);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 540px; /* Prevents text from stretching too wide */
+}
+
+/* Buttons */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-red {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+.btn-white {
+    background-color: var(--white);
+    color: var(--accent);
+   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* --- Right Side: Image --- */
+.sub-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-hero-image img {
+    max-width: 100%;
+    height: auto;
+    /* Optional: Adds a subtle glow to the image if it's a transparent PNG */
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.1)); 
+    animation: float 6s ease-in-out infinite; /* Gentle floating motion */
+}
+
+/* Optional Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 992px) {
+    .sub-hero-grid {
+        grid-template-columns: 1fr; /* Stack vertically */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .sub-hero-text p {
+        margin: 0 auto 30px; /* Center paragraph */
+    }
+
+    .action-buttons {
+        justify-content: center;
+    }
+
+    .sub-hero-text h2 {
+        font-size: 32px;
+    }
+    
+    .sub-hero-image img {
+        display: none; /* Make image slightly smaller on phones */
+    }
+}

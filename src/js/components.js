@@ -25,6 +25,12 @@ export async function initializeComponents() {
     loadComponent('#footer', '/src/components/footer.html'),
     loadComponent('#hero', '/src/components/hero.html')
   ]);
+  // Notify other scripts that components have been loaded into the DOM
+  try {
+    window.dispatchEvent(new Event('components:loaded'));
+  } catch (e) {
+    // ignore in very old browsers
+  }
 }
 
 // Auto-initialize when DOM is loaded

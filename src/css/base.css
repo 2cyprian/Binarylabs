@@ -7,6 +7,12 @@
   --border-radius: 8px;
   --navbar-height: 80px;
 }
+*{
+  box-sizing: border-box;
+  padding: 0;
+  
+}
+
 body {
   font-family: var(--font-family);
   margin: 0;
@@ -39,4 +45,9 @@ main {
 /* Ensure hero sections have proper spacing */
 .hero {
   margin-top: 0;
+}
+p{
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
