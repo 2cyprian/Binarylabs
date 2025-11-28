@@ -1,0 +1,299 @@
+.labs-container {
+    display: flex;
+    gap: 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+}
+ .lined-heading{
+    justify-content: center;
+}
+.labs-grid{
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    display: flex;
+}
+
+
+.lab-item,.story-item{
+    display: flex;
+    background-color: var(--primary);
+    flex-direction: column;
+    height: auto;
+    border-radius: 12px;
+    border: none;
+
+}
+.lab-item p{
+    color: white;
+    padding: 10px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+.lab-item h3{
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.labs-grid-row{
+    width: 90rem;
+}
+.labs-grid-row img{
+    width: 48%;
+    height: auto;
+    border: none;
+    border-radius: 12px;
+    margin: 0.4rem;
+
+}
+
+.top img{
+    width: 98%;
+    height: 50%;
+    border-radius: 12px;
+    margin:0.4rem;
+}
+
+.labs-grid-row{
+    display: flex;
+    flex-direction: column;
+}
+.labs-grid-row .right{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+}
+
+
+/* founder */
+.founder-content{
+    margin-bottom: 1rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.founder{
+  background-color: var(--primary);
+    color: white;
+}
+.founder .container{
+    
+
+    display: flex;
+    flex-direction: row;
+}
+.founder h2{
+    color: white;
+    padding: 2rem;
+}
+.founder-text{
+    padding: 2rem;
+    width: 60%;
+    line-height: 1.6;
+    margin-right: 2rem;
+    ;
+}
+.founder-text h3{
+      font-size: 40px;
+     font-weight: 700;
+     text-align: center;
+
+}
+.founder-text p{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+    color: #FFFFFFCC;
+    font-size: small;
+}
+.small{
+    font-style: italic;
+    display: flex;
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    color: rgb(185, 177, 177);
+    justify-content: center;
+}
+/* Container to keep them grouped */
+.ellipse-wrapper {
+    position: relative;
+    width: 250px; /* Width approx covers both shapes */
+    height: 200px; /* Height approx covers both shapes */
+    margin:50px auto;/* Centers the component on screen */
+}
+
+
+/* --- Ellipse 21 (Background) --- */
+.ellipse-back {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    left: 0.5rem;
+  bottom:1rem;
+  
+    
+    background: #CDDBFE;
+    border-radius: 50%; /* Makes it an Ellipse */
+    transform: rotate(-25deg);
+    z-index: 1; /* Sits behind */
+}
+
+/* --- Ellipse 20 (Image) --- */
+.ellipse-front {
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    left: 20px;
+    top: 0.5rem;
+    
+    /* Image handling */
+    background-image: url('/assets/ceo.jpg');
+    background-size: cover;   /* Ensures image fills the shape */
+    background-position: center; /* Centers the face/subject */
+    background-repeat: no-repeat;
+    
+    border-radius: 50%; /* Makes it an Ellipse */
+    z-index: 2; /* Sits in front */
+    
+    /* Optional: Add shadow to separate image from background */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+.socials-icons{
+    gap: 2rem;
+    display: flex;
+}
+.socials-icons i{
+    margin-top: 1rem;
+    font-size: 1rem;
+    gap: 3rem;
+    color: rgb(185, 177, 177);
+
+}
+.socials-icons a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/* our story and expertise */
+
+.expertise-values-row{
+ 
+ 
+
+}
+.story-item{
+    color: white;
+    padding: 1rem;
+}
+.experts-section{
+    background-color: #CDDBFE;
+    padding: 1rem;
+}
+.stat-row{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    color: var(--primary);
+}
+.stat-info .big-number{
+    font-size: 2rem;
+    font-weight: 700;
+}
+.stat-info{
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+}
+.avatar-circle{
+    width: 70px;
+    height: 70px;
+}
+.avatar-circle img{
+    width: 100%;
+    height: auto;
+}
+
+.story-item h3{
+    font: 600;
+    font-size: large;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(185, 177, 177);
+}
+.story-item p{
+    font-size: small;
+    line-height: 1.2rem;
+
+}
+.story-item h4{
+    font-size: small;
+}
+.values-section{
+    /* Rectangle 24 */
+
+background: linear-gradient(270deg, #182638 0%, #446B9E 100%);
+border-radius: 16px;
+margin-top: 1rem;
+
+
+
+}
+.values-section ul{
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+    padding:0 0.7rem 1rem 0.7rem; ;
+}
+.values-section li{
+list-style: none;
+padding: 0.4rem;
+background: #FFFFFF;
+text-align: center;
+margin: 0.2rem;
+border-radius: 8px;
+font-size: 12px;
+color: #182638;
+
+}
+
+.team-container{
+ display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+@media (max-width: 992px) {
+    .labs-grid{
+        flex-direction: column;
+    }
+    .labs-grid-row .right{
+        flex-direction: column;
+        align-self: center;
+    }
+    .lab-item img{
+        width: 98%;
+        height: auto;
+    }
+    .labs-grid-row{
+        width: 100%;
+    }
+    .founder-content{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .founder .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .founder-text{
+        width: 100%;
+        padding: 2rem;
+        margin: 0;
+    }
+    .ellipse-wrapper {
+        margin: 0;
+    }
+}

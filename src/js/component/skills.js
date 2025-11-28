@@ -47,7 +47,10 @@ const OverviewCardTemplate = (item) => `
         
         <!-- Content Front Card -->
         <div class="card card-front">
+            <span class="card-icon">
             <img src="${item.icon}" alt="${item.title} icon">
+
+            </span>
             <h3>${item.title}</h3>
             <p>${item.desc}</p>
     <a href="" class="overview-link">${item.link}</a>

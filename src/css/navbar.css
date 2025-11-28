@@ -47,11 +47,13 @@ body { font-family: 'Poppins', sans-serif; }
 
 /* --- 2. LINKS (Middle) --- */
 .nav-collapse {
+    width: 40rem;
+    
     display: flex;
     align-items: center;
     gap: 40px;
     flex: 1; /* Takes available space */
-    justify-content: flex-end; /* Pushes content to right relative to logo */
+    justify-content: center; /* Pushes content to right relative to logo */
 }
 
 /* However, we want links in middle and button at end. 
@@ -61,6 +63,9 @@ body { font-family: 'Poppins', sans-serif; }
     display: flex;
     list-style: none;
     gap: 20px;
+    margin-left: 10rem;
+    
+
     
 }
 
@@ -95,8 +100,10 @@ body { font-family: 'Poppins', sans-serif; }
     
 }
 .nav-btn-wrapper {
-    width: 186px;
     height: auto;
+    display: flex;
+    justify-content:  end;
+    margin-left: 10rem;
 }
 /* --- MOBILE TOGGLE --- */
 .mobile-menu-btn {
@@ -164,6 +171,7 @@ body { font-family: 'Poppins', sans-serif; }
         padding: 20px ;
         border: 2px solid hsla(8, 100%, 59%,0.4);
         width: 100%;
+        
     
 
         
@@ -176,8 +184,12 @@ body { font-family: 'Poppins', sans-serif; }
     }
 
     .nav-btn-wrapper {
-            border-radius: 26px;
-            border: 2px solid var(--text);
+         display: flex;
+         width: 12rem;
+        border-radius: 26px;
+         border: 2px solid var(--text);
+         margin: 0;
+        
             
             
                 
@@ -188,6 +200,7 @@ body { font-family: 'Poppins', sans-serif; }
          text-align: center;
          padding: 10px;
          border: none;
+            width: 100%
          
     ;
     }
