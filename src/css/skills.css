@@ -177,4 +177,7 @@
         height: auto;
         margin-bottom: 1rem;
     }
+    .action-btn .btn{
+        margin-bottom: 0.6rem;
+    }
 }
