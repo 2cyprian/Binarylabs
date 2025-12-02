@@ -18,6 +18,7 @@ body {
   margin: 0;
   background: #f8f9fa;
   color: var(--primary);
+
 }
 a {
   color: var(--primary);
