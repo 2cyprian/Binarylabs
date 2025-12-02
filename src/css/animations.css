@@ -1,0 +1,303 @@
+/* =========================================
+   ANIMATIONS & REVEAL EFFECTS
+   ========================================= */
+
+/* Preload animations to avoid layout shift */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+/* -------- REVEAL & FADE-IN ANIMATIONS -------- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------- IDLE ANIMATIONS -------- */
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* -------- REVEAL CLASS (default hidden) -------- */
+
+.reveal {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------- HERO ANIMATIONS -------- */
+
+.hero {
+  animation: fadeInDown 0.8s ease-out 0.1s both;
+}
+
+#hero {
+  animation: scaleIn 0.9s ease-out 0.2s both;
+}
+
+/* -------- SECTION ANIMATIONS -------- */
+
+.about-us {
+  animation: fadeInUp 0.7s ease-out 0s both;
+}
+
+.about-container {
+  animation: fadeInLeft 0.8s ease-out 0.2s both;
+}
+
+.about-image img {
+  animation: fadeInRight 0.8s ease-out 0.4s both;
+}
+
+.services {
+  animation: slideUp 0.8s ease-out 0s both;
+}
+
+.lined-heading {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+/* -------- CARD ANIMATIONS -------- */
+
+.service-card {
+  animation: fadeInUp 0.6s ease-out both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.success-card {
+  animation: fadeInUp 0.6s ease-out both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.success-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.success-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.success-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* -------- TESTIMONIAL ANIMATIONS -------- */
+
+.testimonial {
+  animation: fadeInUp 0.7s ease-out both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial img {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* -------- IMAGE LAZY-LOAD ANIMATIONS -------- */
+
+.lazy-img {
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  transition: opacity 0.5s ease-out;
+}
+
+.lazy-img.loaded {
+  animation: none;
+  opacity: 1;
+}
+
+/* -------- BUTTON ANIMATIONS -------- */
+
+.btn-nav-cta,
+.btn-nav-cta a {
+  transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.btn-nav-cta:hover {
+  animation: none;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* -------- NAVBAR ANIMATIONS -------- */
+
+.nav-links a {
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* -------- REDUCE MOTION SUPPORT -------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal.in-view {
+    opacity: 1;
+    transform: none;
+  }
+
+  .lazy-img,
+  .lazy-img.loaded {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* -------- LOADING STATE -------- */
+
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* -------- SMOOTH SCROLL -------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------- PAGE TRANSITION (Optional) -------- */
+
+body {
+  animation: fadeInUp 0.5s ease-out;
+}
