@@ -51,7 +51,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    padding: auto;
+    padding-bottom: 4rem;
 }
 
 .hero-cta .btn-hero {
@@ -87,7 +87,7 @@
 }
 
 .stats h2{
-    font-size: 48px;
+    font-size: 40px;
     color: var(--primary);
     margin-bottom: 2px;
 }
@@ -210,6 +210,7 @@
             }    
     .stat-item{
     padding: 20px;
+    
 
     }     
     .stats .stat-item {
@@ -291,6 +292,4 @@
         .marquee-track { gap: 12px; }
         .marquee-track img { height: 24px; max-width: 45%; }
  
-    
-
-    
+    }
