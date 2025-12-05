@@ -3,7 +3,7 @@ const RenderEngine = {
     load: function(containerId, data, template) {
         const container = document.getElementById(containerId);
         if (container) {
-            container.innerHTML = data.map(item => template(item)).join('');
+            container.innerHTML = data.map((item, index) => template(item, index)).join('');
         } else {
             console.error(`Error: Container #${containerId} not found in HTML.`);
         }
@@ -39,14 +39,14 @@ const overviewData = [
 ];
 
 // --- 2. TEMPLATE (Matches your existing CSS classes) ---
-const OverviewCardTemplate = (item) => `
+const OverviewCardTemplate = (item, index) => `
     <!-- Changed div to 'a' to make it clickable, added inline style to reset link colors -->
-        <div class="overview-item" >
+        <div class="overview-item"  id="card-template">
         <!-- Decorative Back Card -->
-        <div class="card card-back"></div>
+      
         
-        <!-- Content Front Card -->
-        <div class="card card-front">
+   
+        <div class="card  ${index % 2 === 0 ? 'border-bottom' : 'border-top'}">
             <span class="card-icon">
             <img src="${item.icon}" alt="${item.title} icon">
 

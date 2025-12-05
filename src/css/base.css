@@ -6,6 +6,12 @@
   --font-family: 'Tilt Neon', sans-serif;
   --border-radius: 8px;
   --navbar-height: 80px;
+  --h1:46px;
+  --h2:36px;
+  --h3:24px;
+  --p1:18px;
+  --p2:16px;
+  --p3:14px;
 }
 *{
   box-sizing: border-box;
@@ -39,16 +45,19 @@ a {
 }
 
 /* Push main content below fixed navbar */
-main {
-  margin-top: 50px;
-}
+
 
 /* Ensure hero sections have proper spacing */
 .hero {
   margin-top: 0;
 }
 p{
-  line-height: 1.6;
+  line-height: 1;
+  font: var(--p1);
   margin: 0;
   padding: 0;
+}
+.container{
+  margin: 0 2rem;
+
 }
