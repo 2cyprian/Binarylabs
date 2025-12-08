@@ -5,10 +5,10 @@
     color: var(--white);
     display: flex;
     align-items: center;
+    margin: 0 2rem;
 }
 
 .container {
-    margin: 0 auto;
     width: 100%;
 }
 

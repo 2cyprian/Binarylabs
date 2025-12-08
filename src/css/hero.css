@@ -4,14 +4,15 @@
     color: var(--primary);
     background-color: transparent;
     overflow: hidden;
+    margin: 0 2rem;
 
     
     
 }
 
 .hero .container {
-    margin: 0  2rem;
     padding-top:10px;
+    margin: 0 auto;
 }
 
 .hero-main {
@@ -19,16 +20,17 @@
     grid-template-columns: 1fr 1fr; /* Desktop: Side by side */
     gap: 10px;
     align-items: center;
+    height: 100%;
 }
 
 /* --- LEFT COLUMN: TEXT --- */
 .hero-content{
-        max-width: 35rem;
+        max-width: 30rem;
 
 }
 .hero-content h1 {
     color: var(--primary);
-    font-size: var(--h1);
+    font-size: var(--h2);
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 5px;
@@ -94,7 +96,7 @@
 }
 .stats p {
     color: var(--primary);
-    font-size: 14px;
+    font-size: var(--p3);
 }
 
 /* --- RIGHT COLUMN: COMPLEX VISUAL --- */

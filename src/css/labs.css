@@ -1,8 +1,61 @@
 .labs-container {
     display: flex;
     gap: 20px;
-    background-color: #f9f9f9;
+    background: linear-gradient(180deg, rgba(182, 0, 0, 0.08) 0%, rgba(24, 38, 56, 0.08) 100%);
+    width: 100%;
     margin-bottom: 1rem;
+    padding-top: 1rem;
+   
+}
+.labs-content{
+    display: flex;
+    gap: 10px;
+}
+
+.labs-content .img img{
+    width: 29rem;
+    height: 32rem;
+    padding: 1rem;
+    border-radius: 34px;
+}
+.labs-about h3{
+    font-size: var(--h2);
+    margin-top: 1rem;
+}
+.labs-about .labs-p{
+    font-size: 18px;
+}
+.labs-values{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 32%;
+  
+}
+.values-list{
+    background-color: var(--white);
+    border-radius: 16px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 15rem;
+    height: 15rem;
+    
+  
+} 
+.values-list h3{
+    font-size: var(--h3);
+    text-align: center;
+
+}
+.values-list p{
+    font-size: var(--p3);
+    text-align: justify;
+    line-height: 1.5;
+    text-justify: inter-word;
+}
+.values-icon{
+    display: flex;
+    justify-content: center;
 }
  .lined-heading{
     justify-content: center;
@@ -10,7 +63,6 @@
 .labs-grid{
     gap: 20px;
     grid-template-columns: 1fr 1fr;
-    width: 100%;
     display: flex;
 }
 
@@ -19,21 +71,23 @@
     display: flex;
     background-color: var(--primary);
     flex-direction: column;
+    flex-grow: 1;
     height: auto;
     border-radius: 12px;
     border: none;
+    width: 100%;
 
 }
 .lab-item p{
     color: white;
     padding: 10px;
-    font-size: 0.8rem;
+    font-size: var(--p2);
     line-height: 1.5;
 }
 .lab-item h3{
     color: white;
     padding: 10px;
-    font-size: 1rem;
+    font-size: var(--h2);
     margin-bottom: 0.5rem;
 }
 
@@ -49,118 +103,62 @@
 
 }
 
-.top img{
-    width: 98%;
-    height: 50%;
+.top{
+    width: 50%;
     border-radius: 12px;
     margin:0.4rem;
+    padding: 1rem;
 }
 
 .labs-grid-row{
     display: flex;
     flex-direction: column;
+  
 }
 .labs-grid-row .right{
     display: flex;
-    flex-direction: row;
-    align-self: flex-end;
     margin-bottom: 1rem;
 }
 
 
-/* founder */
-.founder-content{
-    margin-bottom: 1rem;
-    display: flex;
-    width: 100%;
-    height: auto;
-}
-.founder{
-  background-color: var(--primary);
-    color: white;
-}
-.founder .container{
-    
 
-    display: flex;
-    flex-direction: row;
-}
-.founder h2{
-    color: white;
-    padding: 2rem;
-}
 .founder-text{
-    padding: 2rem;
-    width: 60%;
-    line-height: 1.6;
-    margin-right: 2rem;
-    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+
 }
 .founder-text h3{
-      font-size: 40px;
+      font-size: var(--h3);
      font-weight: 700;
      text-align: center;
 
 }
 .founder-text p{
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    font-weight: 400;
     color: #FFFFFFCC;
-    font-size: small;
+    font-size: var(--p2);
 }
 .small{
     font-style: italic;
     display: flex;
-    font-weight: 400;
-    font-size: 0.9rem;
     margin-left: 0.5rem;
     color: rgb(185, 177, 177);
     justify-content: center;
 }
-/* Container to keep them grouped */
-.ellipse-wrapper {
-    position: relative;
-    width: 250px; /* Width approx covers both shapes */
-    height: 200px; /* Height approx covers both shapes */
-    margin:50px auto;/* Centers the component on screen */
-}
 
 
-/* --- Ellipse 21 (Background) --- */
-.ellipse-back {
-    position: absolute;
-    width: 250px;
-    height: 180px;
-    left: 0.5rem;
-  bottom:1rem;
-  
-    
-    background: #CDDBFE;
-    border-radius: 50%; /* Makes it an Ellipse */
-    transform: rotate(-25deg);
-    z-index: 1; /* Sits behind */
-}
 
-/* --- Ellipse 20 (Image) --- */
-.ellipse-front {
-    position: absolute;
-    width: 250px;
-    height: 180px;
+/* --- founder (Image) --- */
+.founder-text img{
+    width: 130px;
+    height: 130px;
     left: 20px;
     top: 0.5rem;
-    
-    /* Image handling */
-    background-image: url('/assets/ceo.jpg');
-    background-size: cover;   /* Ensures image fills the shape */
-    background-position: center; /* Centers the face/subject */
-    background-repeat: no-repeat;
-    
     border-radius: 50%; /* Makes it an Ellipse */
-    z-index: 2; /* Sits in front */
-    
-    /* Optional: Add shadow to separate image from background */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+   
+   
 }
 .socials-icons{
     gap: 2rem;
@@ -180,27 +178,31 @@
 
 /* our story and expertise */
 
-.expertise-values-row{
- 
- 
 
-}
 .story-item{
     color: white;
-    padding: 1rem;
+
 }
+.expertise-values-row{
+    height:  100%;
+    width: 50%;
+}
+
 .experts-section{
     background-color: #CDDBFE;
     padding: 1rem;
+    margin-top: 0.8rem;
+    width: 90%;
 }
 .stat-row{
     display: flex;
+    margin-top: 0.5rem;
     gap: 2rem;
-    margin-top: 1rem;
+    height: 8rem;
     color: var(--primary);
 }
 .stat-info .big-number{
-    font-size: 2rem;
+    font-size: var(--h1);
     font-weight: 700;
 }
 .stat-info{
@@ -210,34 +212,24 @@
     flex-direction: column;
 }
 .avatar-circle{
-    width: 70px;
-    height: 70px;
+    width: clamp(50px, 6vw, 80px);
+    height: clamp(50px, 6vw, 80px);
 }
 .avatar-circle img{
     width: 100%;
     height: auto;
 }
 
-.story-item h3{
-    font: 600;
-    font-size: large;
-    padding: 1rem;
-    border-bottom: 1px solid rgb(185, 177, 177);
-}
-.story-item p{
-    font-size: small;
-    line-height: 1.2rem;
-
-}
 .story-item h4{
-    font-size: small;
+    font-size: var(--h3);
 }
 .values-section{
     /* Rectangle 24 */
-
 background: linear-gradient(270deg, #182638 0%, #446B9E 100%);
 border-radius: 16px;
 margin-top: 1rem;
+width: 90%;
+height: 10rem;
 
 
 
@@ -246,15 +238,15 @@ margin-top: 1rem;
     display: grid;
    grid-template-columns: 1fr 1fr;
     padding:0 0.7rem 1rem 0.7rem; ;
+    gap: 8px;
 }
 .values-section li{
 list-style: none;
-padding: 0.4rem;
 background: #FFFFFF;
 text-align: center;
-margin: 0.2rem;
+
 border-radius: 8px;
-font-size: 12px;
+font-size: var(--p3);
 color: #182638;
 
 }
@@ -265,6 +257,31 @@ color: #182638;
     gap: 0.3rem;
 }
 @media (max-width: 786px) {
+    .labs-container{
+        width: 100%;
+    }
+    .labs-content{
+        flex-direction: column;
+    }
+    .img{
+        display: none;
+    }
+    .labs-values{
+        flex-direction: column;
+        position: relative;
+        left: 10px;
+
+        gap:10px;
+        padding: 2rem;
+        
+       
+
+    }
+    .values-list{
+        padding: 1rem;
+        width: 80%;
+        height: auto;
+    }
     .labs-grid{
         flex-direction: column;
     }
@@ -274,6 +291,7 @@ color: #182638;
     }
     .stat-row{
         gap: 5px;
+        width: 100%;
     }
     .big-number{
         font-size: 1.5rem;
@@ -290,6 +308,9 @@ color: #182638;
     .member-name{
         font-size: 14px;
     }
+    .lab-item{
+        width: 200%;
+    }
     .lab-item img{
         width: 98%;
         height: auto;
@@ -297,6 +318,7 @@ color: #182638;
     .labs-grid-row{
         width: 100%;
     }
+    
     .founder-content{
         flex-direction: column;
         align-items: center;
@@ -305,16 +327,20 @@ color: #182638;
     .founder .container{
         flex-direction: column;
         align-items: center;
+        padding: 0;
+    }
+    .top{
+        width: 100%;
+        left: 0;
+       
     }
     .founder-text{
         width: 100%;
-        padding: 2rem;
-        margin: 0;
-    }
-    .ellipse-wrapper {
-        margin: 0;
-    }
-    .team-member{
       
+        margin: 0;
     }
-}
+    .values{
+
+    }
+   
+}    
