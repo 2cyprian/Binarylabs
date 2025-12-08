@@ -25,13 +25,13 @@
 
 /* --- LEFT COLUMN: TEXT --- */
 .hero-content{
-        max-width: 30rem;
+        max-width: 40rem;
 
 }
 .hero-content h1 {
     color: var(--primary);
-    font-size: var(--h2);
-    line-height: 1.1;
+    font-size: var(--h1);
+    line-height: 1;
     font-weight: 700;
     margin-bottom: 5px;
     
@@ -45,7 +45,7 @@
     font-size: var(--p1);
     color: var(--text-secondary);
     margin-bottom: 5px;
-    line-height: 1.6;
+    line-height: 1.5;
     text-align: justify;
 }
 
@@ -79,18 +79,18 @@
 }
 /* Stats  */
 .stats-container{
- margin-top: -8rem;
+ margin-top: -6.5rem;
 }
 .stats {
     display: flex;
-    gap: 4rem;
+    gap: 5rem;
     padding: 10px;
     text-align: center;
 }   
 
 
 .stats h2{
-    font-size: 40px;
+    font-size: var(--h2);
     color: var(--primary);
     margin-bottom: 2px;
 }
@@ -102,9 +102,10 @@
 /* --- RIGHT COLUMN: COMPLEX VISUAL --- */
 .hero-visual {
     position: relative;
-    width: 40rem;
+    width: 30rem;
     overflow:visible;
-    
+    left: 2rem;   
+    margin-top: 1rem;
 }
 
 .hero-visual img {
@@ -173,6 +174,9 @@
    5. RESPONSIVE STYLES
    ========================================= */
 @media (max-width: 991px) {
+    .hero{
+        margin: 0;
+    }
     
     .hero-main {
         grid-template-columns: 1fr;
