@@ -33,6 +33,7 @@ body { font-family: var(--font-family); }
   width: 45px;
   height: 50px;
   padding-left:1rem ;
+  margin-left: 2rem;
 }
 
 .nav-logo img {
@@ -134,7 +135,9 @@ body { font-family: var(--font-family); }
         display:block;
         margin-right: 4rem;
     }
-    
+    .nav-logo{
+        margin:0;
+    }
 
     /* Hide navigation links and CTA button by default on mobile */
     .nav-collapse {
