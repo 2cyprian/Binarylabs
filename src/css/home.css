@@ -26,6 +26,8 @@
     object-fit: cover;
      border-bottom-right-radius: 100px;
     border-top-left-radius: 100px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
  }
 
 
@@ -94,11 +96,14 @@
     padding: 1rem;
    border-right: 2px solid #18263814;
 }
+.end{
+    border-right: none;
+}
 .service-card p{
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     color: var(--primary);
-    font-size: var(--p2);
+    font-size: var(--p1);
     line-height: 1.6;
     text-align: justify;
 }

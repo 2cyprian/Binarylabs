@@ -33,7 +33,7 @@
 .hero-content h1 {
     color: var(--primary);
     font-size: var(--h1);
-    line-height: 1;
+    line-height: 1.4;
     font-weight: 700;
     margin-bottom: 5px;
     
@@ -46,7 +46,7 @@
 .hero-desc {
     font-size: var(--p1);
     color: var(--text-secondary);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     line-height: 1.5;
     text-align: justify;
 }
@@ -104,10 +104,11 @@
 /* --- RIGHT COLUMN: COMPLEX VISUAL --- */
 .hero-visual {
     position: absolute;
-    width: clamp(300px, 40vw, 43rem);
+    width: clamp(650px, 40vw, 40rem);
     overflow:visible;
-   right: 0;
-    margin: 1rem;
+    right: -2rem;
+     top: -4rem;
+    margin:     0.3rem;
 }
 
 .hero-visual img {
@@ -153,15 +154,15 @@
 
 .marquee-track {
     display: flex;
-    gap: 50px;
+    gap: 30px;
     width: max-content;
     /* Infinite Scroll Animation */
     animation: scroll 10s linear infinite;
 }
 
 .marquee-track img {
-    height: 35px; /* Fix logo height */
-    width: auto;
+    height: 23px; /* Fix logo height */
+    width: 70px;
     opacity: 0.8;
     transition: opacity 0.3s;
 }
