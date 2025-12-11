@@ -5,6 +5,8 @@
     background-color: transparent;
     overflow: hidden;
     margin: 0 2rem;
+    height: 40rem;
+    padding-top:4rem;
 
     
     
@@ -101,11 +103,11 @@
 
 /* --- RIGHT COLUMN: COMPLEX VISUAL --- */
 .hero-visual {
-    position: relative;
-    width: 30rem;
+    position: absolute;
+    width: clamp(300px, 40vw, 43rem);
     overflow:visible;
-    left: 2rem;   
-    margin-top: 1rem;
+   right: 0;
+    margin: 1rem;
 }
 
 .hero-visual img {
@@ -128,8 +130,8 @@
     gap: 30px;
     position: relative;
     z-index: 3;
-   
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    bottom: -10rem;
+
 }
 
 .trusted-label h3 {
@@ -138,6 +140,7 @@
     font-weight: 700;
     white-space: nowrap;
     margin-right: 20px;
+
 }
 
 .marquee-wrapper {
@@ -170,12 +173,15 @@
     100% { transform: translateX(-50%); } /* Move half distance (because duplicated) */
 }
 
+
 /* =========================================
    5. RESPONSIVE STYLES
    ========================================= */
 @media (max-width: 991px) {
     .hero{
         margin: 0;
+        padding-top: 0;
+        height: fit-content;
     }
     
     .hero-main {
@@ -219,6 +225,7 @@
     .stats {
              justify-content: space-around;
             gap: 15px;
+            padding-top:2rem;
             }    
     .stat-item{
     padding: 20px;
@@ -237,9 +244,10 @@
         flex-direction: column;
         border-radius: 20px;
         padding: 20px;
+        bottom:3rem;
     }
     .stats-container{
-        margin-top: 5rem;
+        margin-top: 2rem;
     }
     .trusted-label { margin-bottom: 15px; }
 

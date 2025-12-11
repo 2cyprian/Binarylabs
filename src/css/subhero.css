@@ -29,7 +29,7 @@
 
 }
 
-.sub-hero-text .highlight {
+ .highlight {
         background-color:var(--text);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -78,12 +78,11 @@
 /* --- Right Side: Image --- */
 .sub-hero-image {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    right: 0;
 }
 
 .sub-hero-image img {
-    max-width: 100%;
+    width:35rem;
     height: auto;
     /* Optional: Adds a subtle glow to the image if it's a transparent PNG */
     filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.1)); 

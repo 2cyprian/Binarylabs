@@ -183,10 +183,7 @@
   animation-delay: 0.3s;
 }
 
-.success-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-}
+
 
 /* -------- TESTIMONIAL ANIMATIONS -------- */
 
@@ -195,10 +192,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
+
 
 .testimonial img {
   animation: pulse 2s ease-in-out infinite;

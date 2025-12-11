@@ -13,9 +13,9 @@ body { font-family: var(--font-family); }
     align-items: center;
     position: fixed; /* Stick to top */
     top: 0;
+    border: none;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 
@@ -57,7 +57,7 @@ body { font-family: var(--font-family); }
     list-style: none;
     justify-content: center;
     gap: 18px;
-    margin-left: rem;
+    
     
     
 

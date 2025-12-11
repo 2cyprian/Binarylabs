@@ -5,29 +5,31 @@
 class Router {
   constructor() {
     this.routes = {
-      '/': 'index.html',
-      '/home': 'home.html',
-      '/about': 'about.html',
-      '/projects': 'projects.html',
-      '/contact': 'contact.html'
+      '/': { name: 'Home', file: 'home.html' },
+      '/skills': { name: 'Skills', file: 'skills.html' },
+      '/labs': { name: 'Labs', file: 'labs.html' },
+      '/contact': { name: 'Contact', file: 'contact.html' }
     };
     this.currentPath = '/';
   }
 
   init() {
-    // Handle browser back/forward buttons
-    window.addEventListener('popstate', () => {
-      this.navigate(window.location.pathname);
+    // Handle hash changes
+    window.addEventListener('hashchange', () => {
+      this.navigate(window.location.hash);
     });
 
     // Handle initial route
-    const path = window.location.pathname;
-    if (path !== '/' && path !== '') {
-      this.navigate(path);
-    }
+    const hash = window.location.hash || '#/';
+    this.navigate(hash);
   }
 
   navigate(path) {
+    // Remove hash if present
+    if (path.startsWith('#')) {
+      path = path.substring(1);
+    }
+    
     // Normalize path
     if (!path.startsWith('/')) {
       path = '/' + path;
@@ -35,14 +37,14 @@ class Router {
 
     // Find matching route
     const routePath = Object.keys(this.routes).find(route => {
-      return path.includes(route) || path.endsWith(this.routes[route]);
+      return path === route;
     });
 
     if (routePath) {
       this.currentPath = routePath;
-      const page = this.routes[routePath];
-      this.loadPage(page);
-      window.history.pushState(null, '', routePath);
+      const routeConfig = this.routes[routePath];
+      this.loadPage(routeConfig.file);
+      window.location.hash = routePath;
       // If contact, scroll to footer
       if (routePath === '/contact') {
         setTimeout(() => {
@@ -57,10 +59,18 @@ class Router {
     }
   }
 
-  loadPage(page) {
-    // This is a placeholder for actual page loading
-    // In a real SPA, you might use fetch to load page content
-    console.log(`Navigating to: ${page}`);
+  async loadPage(page) {
+    try {
+      const response = await fetch(`/src/pages/${page}`);
+      if (!response.ok) throw new Error(`Failed to load ${page}`);
+      const content = await response.text();
+      const mainContent = document.getElementById('main-content');
+      if (mainContent) {
+        mainContent.innerHTML = content;
+      }
+    } catch (error) {
+      console.error('Error loading page:', error);
+    }
   }
 
   add(path, page) {

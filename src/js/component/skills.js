@@ -15,25 +15,32 @@ const overviewData = [
     {
         title: "LinuxOS Externals",
         icon: "/assets/icons/linux.svg",
-        desc: "Obtaining hands-on knowledge around Open Source Operating Systems Internals contribute significantly to skills needed for employability.",
+        desc: `Obtaining hands-on knowledge around Open Source Operating Systems 
+        Internals contribute significantly to skills needed for employability and innovative mindset since all Internet technology companies today, 
+        depend of LinuxOS variants to deliver digital products and services.`,
         link: "Become A Linux Guru" // <--- Add your link here
     },
     {
         title: "System Engineering",
         icon: "/assets/icons/system.svg",
-        desc: "Take a journey into the world of Internet systems designs, development, testing, deployments, maintenance and scaling.",
+        desc: `Take a journey into the world of Internet systems designs, development,testing,deployments, maintenance and scaling and while at it, gain advanced curated technical hands-on skills in systems engineering while working on real world 
+               open-source server Operating systems and multi-vendor hardware.`,
         link: "Design and Engineer System"
     },
     {
         title: "Network Engineering",
         icon: "/assets/icons/networking.svg",
-        desc: "Gaining the latest Network Administration hands-on knowledge contributes significantly to the skills needed for employability.",
+        desc: `Gaining the latest Network Administration hands-on 
+knowledge contributes significantly to the skills needed 
+for employability and operating IP network with single ISP provider connectivity. The skills are fundamental in the establishment and operation of Local Area Networks`,
         link: "Administrator and Enterprise Network"
     },
     {
         title: "DevOps Engineering",
         icon: "/assets/icons/code.svg",
-        desc: "The Python has become one of the most sough high-level programming languages in the world and learning to write code.",
+        desc: `The Python has become one of the most sough high-level programming languages in the world and learning to write code and program in Python
+Language is a significant added advantage towards
+employability and innovative software developers mindset.`,
         link: "Design and Engineer System"
     }
 ];

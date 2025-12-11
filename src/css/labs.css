@@ -22,14 +22,18 @@
     font-size: var(--h2);
     margin-top: 1rem;
 }
+.labs-about{
+    padding-right: 2rem;
+}
 .labs-about .labs-p{
     font-size: 18px;
+    margin-left: 2rem;
 }
 .labs-values{
     display: flex;
     gap: 20px;
     position: absolute;
-    left: 32%;
+    left: 25%;
   
 }
 .values-list{
@@ -37,8 +41,8 @@
     border-radius: 16px;
     padding: 0.5rem;
     margin-top: 1rem;
-    width: 15rem;
-    height: 15rem;
+    width: clamp(15rem, 15vw, 18rem);
+    height: clamp(15rem, 15vw, 18rem);
     
   
 } 
@@ -49,7 +53,7 @@
 }
 .values-list p{
     font-size: var(--p3);
-    text-align: justify;
+    text-align: left;
     line-height: 1.5;
     text-justify: inter-word;
 }
@@ -227,9 +231,10 @@
     /* Rectangle 24 */
 background: linear-gradient(270deg, #182638 0%, #446B9E 100%);
 border-radius: 16px;
-margin-top: 1rem;
+margin: 1rem 0;
 width: 90%;
-height: 10rem;
+height: auto;
+
 
 
 
@@ -244,7 +249,7 @@ height: 10rem;
 list-style: none;
 background: #FFFFFF;
 text-align: center;
-
+padding: 11px 15px;
 border-radius: 8px;
 font-size: var(--p3);
 color: #182638;
@@ -256,9 +261,43 @@ color: #182638;
     flex-direction: row;
     gap: 0.3rem;
 }
+@media (max-width: 1024px) {
+
+    .labs-container{
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    .labs-values{
+        gap: 4px;
+    }
+    .labs-grid{
+        flex-direction: column;
+        width: 100%;
+    }
+    .labs-grid-row{
+        width: 100%;
+    }
+    .labs-grid-row .right{
+        flex-direction: column;
+        align-items: center;
+    }
+    .values-list{
+        width: 14rem;
+        height: auto;
+        gap: 4px;
+        left: 40%;
+    } 
+    .values-list p{
+        font-size: var(--p3);
+    }
+    .values-list h3{
+        font-size: var(--h3);
+    }
+}
 @media (max-width: 786px) {
     .labs-container{
         width: 100%;
+        height: auto;
     }
     .labs-content{
         flex-direction: column;
