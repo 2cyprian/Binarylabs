@@ -22,12 +22,17 @@
 }
 
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-family);
   width: 100%;
   color: var(--primary);
-  
- 
+  transform-origin: top center;
 }
 a {
   color: var(--primary);
@@ -58,4 +63,28 @@ p{
   font: var(--p1);
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 1920px) {
+  body {
+    transform: scale(1.2);
+    width: calc(100% / 1.05);
+    margin: auto;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    transform: scale(1.8);
+    width: calc(100% / 1.1);
+    margin: auto;
+  }
+}
+
+@media (min-width: 3700px) {
+  body {
+    transform: scale(2.5);
+    width: calc(100% / 1.15);
+    margin: auto;
+  }
 }

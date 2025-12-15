@@ -1,11 +1,11 @@
 
 // --- TEAM DATA ---
 const teamMembers = [
-    { name: "Fuad", img: "/assets/tech/fuad.svg" },
-    { name: "Lugano", img: "/assets/tech/lugano.svg" },
+    { name: "Jamal", img: "/assets/tech/fuad.svg" },
+    { name: "Janeth", img: "/assets/tech/lugano.svg" },
     { name: "Aisha", img: "/assets/tech/aisha.svg" },
     { name: "Lupyana", img: "/assets/tech/lupyan.svg" },
-    { name: "Maria", img: "/assets/tech/maria.svg" }
+    { name: "Anna", img: "/assets/tech/maria.svg" }
 ];
 const foundersData = [
   {

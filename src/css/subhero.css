@@ -76,8 +76,8 @@
 }
 
 /* --- Right Side: Image --- */
-.sub-hero-image {
-    width: min(35rem,90%);
+.sub-hero-image  {
+    width: min(40rem,90%);
       right: 0;
 }
 
@@ -86,6 +86,9 @@
     /* Optional: Adds a subtle glow to the image if it's a transparent PNG */
     filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.1)); 
     animation: float 6s ease-in-out infinite; /* Gentle floating motion */
+}
+.skills-hero-image img {
+    width: clamp(400px, 35vw, 500px);
 }
 
 /* Optional Floating Animation */

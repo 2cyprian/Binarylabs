@@ -164,8 +164,9 @@
       padding: 32px;
       min-height: 220px;
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: space-between;
+      justify-content: center;
       overflow: hidden;
     }
 
@@ -184,8 +185,10 @@
     }
 
     .testimonial-role {
+        color: aliceblue;
       font-weight: 400;
-      font-size: var(--p2);
+      font-size: var(--p3);
+      padding: 0.5rem;
       opacity: 0.85;
     }
 
@@ -284,6 +287,9 @@
     }
     .action-btn .btn{
         margin-bottom: 0.6rem;
+    }
+    .testimonial-card{
+
     }
 }
 

@@ -4,11 +4,14 @@
     
 }
 .labs-container {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 1rem 0;
     background: linear-gradient(180deg, rgba(182, 0, 0, 0.08) 0%, rgba(24, 38, 56, 0.08) 100%);
    
    
 }
+
 .labs-content{
     display: flex;
     gap: 10px;
@@ -234,7 +237,7 @@
 
 /* our story and expertise */
 .story-container
-{
+{ max-width: 1440px;
     margin: 0 auto;
     padding: 2rem 0; 
 
@@ -247,6 +250,7 @@
 .expertise-values-row{
     height:  100%;
     width: 100%;
+    
     gap: 1rem;
 }
 
@@ -392,7 +396,7 @@ color: #182638;
     .labs-content{
         flex-direction: column;
     }
-    .img{
+    .labs-img{
         display: none;
     }
     .labs-values{
@@ -412,10 +416,11 @@ color: #182638;
         height: auto;
     }
     .labs-grid{
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
     .labs-grid-row .right{
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        width: auto;
         align-self: center;
     }
     .stat-row{
@@ -439,7 +444,7 @@ color: #182638;
         text-align: center;
     }
     .lab-item{
-        width: 200%;
+        width: 90%;
     
     }
     .lab-item img{
@@ -461,7 +466,7 @@ color: #182638;
         padding: 0;
     }
     .top{
-        width: 100%;
+        width: 90%;
         left: 0;
        
     }
@@ -470,8 +475,9 @@ color: #182638;
       
         margin: 0;
     }
-    .values{
+   .values li{
+    font-size: var(--p4);
 
-    }
+   }
    
 }
