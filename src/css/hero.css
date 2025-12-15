@@ -4,32 +4,24 @@
     color: var(--primary);
     background-color: transparent;
     overflow: hidden;
-    margin: 0 2rem;
-    height: 40rem;
-    padding-top:4rem;
-
-    
     
 }
-
-.hero .container {
-    padding-top:10px;
-    margin: 0 auto;
-}
-
+  .hero .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 20px;
+    
+    }
 .hero-main {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Desktop: Side by side */
+    grid-template-columns: 1fr 1.2fr; /* Desktop: Side by side */
     gap: 10px;
     align-items: center;
-    height: 100%;
+    margin-bottom: 80px;
 }
 
 /* --- LEFT COLUMN: TEXT --- */
-.hero-content{
-        max-width: 40rem;
 
-}
 .hero-content h1 {
     color: var(--primary);
     font-size: var(--h1);
@@ -48,7 +40,6 @@
     color: var(--text-secondary);
     margin-bottom: 10px;
     line-height: 1.5;
-    text-align: justify;
 }
 
 /* Pills / Chips */
@@ -103,18 +94,35 @@
 
 /* --- RIGHT COLUMN: COMPLEX VISUAL --- */
 .hero-visual {
-    position: absolute;
-    width: clamp(650px, 40vw, 40rem);
-    overflow:visible;
-    right: -2rem;
-     top: -4rem;
-    margin:     0.3rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
 }
 
+@media (max-width:1024px){
+    .hero-content h1{
+        font-size: var(--h2);
+    }
+    .hero-visual {
+        right: -3rem;
+         top: -2rem;
+    }
+    .hero-visual img{
+         width: clamp(500px, 40vw, 35rem);
+            height: auto;
+    }
+    .stats{
+        margin: 0;
+        padding: 0;
+    }
+
+}
 .hero-visual img {
-    width: 100%;
+    width: clamp(35rem, 45vw, 40rem);
     top: 0;
-    right: 0;
     height: auto;
     object-fit: cover;
 }
@@ -131,12 +139,13 @@
     gap: 30px;
     position: relative;
     z-index: 3;
-    bottom: -10rem;
+  margin-top: 1%;
+  
 
 }
 
 .trusted-label h3 {
-    color: #1A202C;
+    color: var(--primary);
     font-size: 18px;
     font-weight: 700;
     white-space: nowrap;
@@ -157,24 +166,41 @@
     gap: 30px;
     width: max-content;
     /* Infinite Scroll Animation */
-    animation: scroll 10s linear infinite;
+    animation: marquee 2s linear infinite;
 }
 
 .marquee-track img {
     height: 23px; /* Fix logo height */
     width: 70px;
-    opacity: 0.8;
-    transition: opacity 0.3s;
+    transition:  0.3s;
 }
 
 .marquee-track img:hover { opacity: 1; }
 
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Move half distance (because duplicated) */
+@keyframes marquee {
+    from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30%);
+  }
+/* Move half distance (because duplicated) */
 }
 
 
+@media (max-width:1190px) {
+    .hero {
+        height: auto;
+        padding-top: 2rem;
+    }
+    
+}
+@media(min-width:1800px) {
+   .hero-visual{
+    right:25%;
+   }
+    
+}
 /* =========================================
    5. RESPONSIVE STYLES
    ========================================= */
@@ -204,7 +230,7 @@
 
     }
     .hero-desc {
-        font-size: var(--p2);
+        font-size: var(--p1);
         margin: 0 auto 30px;
         
     }

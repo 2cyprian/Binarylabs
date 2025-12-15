@@ -3,64 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Brand - Contact</title>
-<!-- favicon -->
- <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="shortcut icon" href="/assets/favicon/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <title>Binary Labs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Mark+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Mark Pro', sans-serif;
+      color: #1F2937;
+      line-height: 1.5;
+      background: #f9f9f9;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-  <meta name="description" content="Get in touch with us for professional services and consultation.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/css/base.css">
-  <link rel="stylesheet" href="/src/css/layout.css">
-  <link rel="stylesheet" href="/src/css/components.css">
-  <link rel="stylesheet" href="/src/css/animations.css">
+    /* Container */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 48px;
+      padding: 60px 0;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 663px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2rem, 4vw, 46px);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 1.2vw, 20px);
+      color: rgba(31, 41, 55, 0.8);
+      margin-top: 16px;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-width: 150px;
+    }
+
+    .stat h2 {
+      font-size: clamp(1.5rem, 4vw, 36px);
+      font-weight: 500;
+    }
+
+    .stat p {
+      font-size: 16px;
+      color: rgba(31, 41, 55, 0.8);
+      margin-top: 4px;
+    }
+
+    .hero-image {
+      position: relative;
+      width: 100%;
+      max-width: 560px;
+      height: auto;
+    }
+
+    .hero-image .gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, #B60000 0%, rgba(31, 41, 55, 0.8) 100%);
+      border-radius: 20px;
+      transform: rotate(-21.96deg);
+      z-index: 1;
+    }
+
+    .hero-image img {
+      position: relative;
+      z-index: 2;
+      border-radius: 20px;
+    }
+
+    /* Partners Logos */
+    .partners {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 26px;
+      margin: 60px 0;
+      justify-content: center;
+    }
+
+    .partners img {
+      height: 24px;
+      object-fit: contain;
+    }
+
+    /* About Section */
+    .about {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding: 60px 0;
+    }
+
+    .about h2 {
+      font-size: clamp(1.5rem, 3vw, 24px);
+      font-weight: 700;
+      color: #1F2937;
+    }
+
+    .about p {
+      font-size: clamp(1rem, 1.2vw, 20px);
+      color: rgba(31, 41, 55, 0.8);
+    }
+
+    /* Rectangle Image */
+    .about-image {
+      width: 100%;
+      max-width: 623px;
+      border-radius: 100px 12px;
+      overflow: hidden;
+    }
+
+    @media(min-width: 1024px){
+      .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+  </style>
 </head>
 <body>
-  <div id="navbar"></div>
-  
-  <main>
+
+  <div class="container">
+
+    <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p>Ready to start your project? Get in touch and let's discuss how we can help you achieve your goals.</p>
-      </div>
-    </section>
-    
-    <section class="section">
-      <div class="container">
-        <div class="grid grid-2">
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Get Started Today</h3>
-            </div>
-            <div class="card-body">
-              <p class="card-text">Ready to transform your business with professional solutions? We're here to help you every step of the way.</p>
-              <p><strong>Email:</strong> hello@yourbrand.com</p>
-              <p><strong>Phone:</strong> (555) 123-4567</p>
-              <a href="mailto:hello@yourbrand.com" class="btn btn-primary">Send Email</a>
-            </div>
+      <div class="hero-content">
+        <h1>Binary (Labs) Retools & Upskills Grad Students & Professionals</h1>
+        <p>We are founded on a mission to RETOOL & UPSKILL technical talent and teams among graduates and professionals with the focus on real-world hands-on domain specific tech industry skills.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <h2>500+</h2>
+            <p>Graduates Upskilled</p>
           </div>
-          
-          <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">Quick Quote</h3>
-            </div>
-            <div class="card-body">
-              <p class="card-text">Tell us about your project and we'll provide a customized quote within 24 hours.</p>
-              <a href="#" class="btn btn-secondary">Request Quote</a>
-            </div>
+          <div class="stat">
+            <h2>89%</h2>
+            <p>Job Placement Rate</p>
+          </div>
+          <div class="stat">
+            <h2>200+</h2>
+            <p>Projects Completed</p>
           </div>
         </div>
       </div>
+
+      <div class="hero-image">
+        <div class="gradient"></div>
+        <img src="/assets/binary.png" alt="Binary Labs">
+      </div>
     </section>
-  </main>
-  
-  <div id="footer"></div>
-  
-  <script type="module" src="/src/js/components.js" defer></script>
-  <script src="/src/js/component/navbar.js" defer></script>
+
+    <!-- Partners Section -->
+    <section class="partners">
+      <img src="the-linux-foundation.png" alt="Linux Foundation">
+      <img src="internet-society.png" alt="Internet Society">
+      <img src="python-software-foundation.png" alt="Python Software Foundation">
+      <img src="irabu.png" alt="Irabu">
+      <img src="the-linux-foundation.png" alt="Linux Foundation">
+      <img src="internet-society.png" alt="Internet Society">
+      <img src="python-software-foundation.png" alt="Python Software Foundation">
+      <img src="irabu.png" alt="Irabu">
+      <!-- Add more logos as needed -->
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-header">
+        <h2>About Us</h2>
+      </div>
+      <p>Our MISSION is to enable graduates and professional teams to be RETOOLED and UPSKILLED with hands-on knowledge to match today's in-demand technical skills and career opportunities. We are founded on a mission that is centered around undergraduates with a focus on industry needs and through our peer-based collaborative learning approach, we deliver 90% curated hands-on specialised technical skills that are in-demand by the industry today across Africa.</p>
+      <div class="about-image">
+        <img src="binary5.jpg" alt="Binary Labs">
+      </div>
+    </section>
+
+  </div>
+
 </body>
 </html>

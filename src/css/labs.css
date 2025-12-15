@@ -1,58 +1,79 @@
+.labs-section{
+    margin: 0 auto;
+    padding: 0 20px;
+    
+}
 .labs-container {
-    display: flex;
-    gap: 20px;
+    padding: 1rem 0;
     background: linear-gradient(180deg, rgba(182, 0, 0, 0.08) 0%, rgba(24, 38, 56, 0.08) 100%);
-    width: 100%;
-    margin-bottom: 1rem;
-    padding-top: 1rem;
+   
    
 }
 .labs-content{
     display: flex;
     gap: 10px;
+    width: 100%;
+    padding: 0 2rem 1rem 2rem;
 }
 
-.labs-content .img img{
-    width: 29rem;
+ .labs-img{
     height: 32rem;
-    padding: 1rem;
     border-radius: 34px;
 }
-.labs-about h3{
-    font-size: var(--h2);
-    margin-top: 1rem;
+.labs-img img{
+    width: 28rem;
+    height: 100%;
+    border-radius: 34px;
+    object-fit: cover;
 }
 .labs-about{
     padding-right: 2rem;
+    max-width: 900px;
+
 }
-.labs-about .labs-p{
+.labs-text{
+   max-width: 700px;
+}
+.labs-text h3{
+    font-size: var(--h3);
+    width: 80%;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+
+}
+
+.labs-text .labs-p{
     font-size: 18px;
+    line-height: 1.5;
+
     margin-left: 2rem;
 }
 .labs-values{
     display: flex;
     gap: 20px;
-    position: absolute;
-    left: 25%;
+    position: relative;
+    z-index: 2;
+    left: -4.5rem;
   
 }
 .values-list{
     background-color: var(--white);
     border-radius: 16px;
-    padding: 0.5rem;
+    padding:1rem;
     margin-top: 1rem;
-    width: clamp(15rem, 15vw, 18rem);
-    height: clamp(15rem, 15vw, 18rem);
+    width:clamp(250px, 20vw, 300px);
+    height: auto;
     
   
 } 
 .values-list h3{
-    font-size: var(--h3);
+    font-size: var(--h2);
     text-align: center;
 
 }
 .values-list p{
-    font-size: var(--p3);
+    font-size: var(--p2);
+    color: var(--primary);
     text-align: left;
     line-height: 1.5;
     text-justify: inter-word;
@@ -65,9 +86,11 @@
     justify-content: center;
 }
 .labs-grid{
-    gap: 20px;
+    gap: 10px;
     grid-template-columns: 1fr 1fr;
-    display: flex;
+    display: grid;
+
+
 }
 
 
@@ -80,12 +103,13 @@
     border-radius: 12px;
     border: none;
     width: 100%;
+    padding: 30px 0;
 
 }
 .lab-item p{
     color: white;
     padding: 10px;
-    font-size: var(--p2);
+    font-size: var(--p3);
     line-height: 1.5;
 }
 .lab-item h3{
@@ -108,16 +132,17 @@
 }
 
 .top{
-    width: 50%;
+    width: 100%;
     border-radius: 12px;
     margin:0.4rem;
     padding: 1rem;
+
 }
 
 .labs-grid-row{
-    display: flex;
-    flex-direction: column;
-  
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+   gap: 1rem;
 }
 .labs-grid-row .right{
     display: flex;
@@ -135,14 +160,17 @@
 
 }
 .founder-text h3{
-      font-size: var(--h3);
+      font-size: var(--h2);
      font-weight: 700;
      text-align: center;
+     padding: 0.5rem 0;
 
 }
 .founder-text p{
     color: #FFFFFFCC;
     font-size: var(--p2);
+    padding-top: 1rem;
+    text-align: justify;
 }
 .small{
     font-style: italic;
@@ -180,29 +208,59 @@
     cursor: pointer;
 }
 
+/* Founders Slider Styles */
+.founders-slider {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.founders-slider .founder-text {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    width: 100%;
+    padding: 2rem;
+}
+
+.founders-slider .founder-text.active {
+    opacity: 1;
+    position: relative;
+}
+
 /* our story and expertise */
+.story-container
+{
+    margin: 0 auto;
+    padding: 2rem 0; 
 
-
+}
 .story-item{
     color: white;
+   
 
 }
 .expertise-values-row{
     height:  100%;
-    width: 50%;
+    width: 100%;
+    gap: 1rem;
 }
 
 .experts-section{
     background-color: #CDDBFE;
-    padding: 1rem;
-    margin-top: 0.8rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
     width: 90%;
 }
 .stat-row{
     display: flex;
     margin-top: 0.5rem;
     gap: 2rem;
-    height: 8rem;
+    height: auto;
     color: var(--primary);
 }
 .stat-info .big-number{
@@ -214,10 +272,10 @@
     font-weight: 700;
     display: flex;
     flex-direction: column;
-}
-.avatar-circle{
-    width: clamp(50px, 6vw, 80px);
-    height: clamp(50px, 6vw, 80px);
+    }
+    .avatar-circle{
+        width: clamp(70px, 8vw, 95px);
+        height: clamp(70px, 8vw, 100px);
 }
 .avatar-circle img{
     width: 100%;
@@ -267,8 +325,21 @@ color: #182638;
         height: auto;
         padding-bottom: 2rem;
     }
+    .labs-text{
+        max-width: 500px;
+    }
+    .labs-text h3{
+        font-size: var(--h3);
+    }
+    .labs-text .labs-p{
+        font-size: var(--p3);
+    
+    }
     .labs-values{
         gap: 4px;
+    }
+    .labs-about{
+        max-width: 600px;
     }
     .labs-grid{
         flex-direction: column;
@@ -282,17 +353,36 @@ color: #182638;
         align-items: center;
     }
     .values-list{
-        width: 14rem;
+        width: 11rem;
         height: auto;
         gap: 4px;
         left: 40%;
     } 
     .values-list p{
-        font-size: var(--p3);
+        font-size: var(--p4);
     }
     .values-list h3{
-        font-size: var(--h3);
+        font-size: var(--p1);
+
     }
+     .labs-grid{
+        flex-direction: row;
+     }
+    .labs-grid-row img{
+        width: 90%;
+}
+.experts-section{
+    width: 100%;
+   
+}
+.values-section{
+    width: 100%;
+ 
+}
+.avatar-circle{
+    width: clamp(50px, 8vw, 80px);
+    height: clamp(50px, 8vw, 80px);
+}
 }
 @media (max-width: 786px) {
     .labs-container{
@@ -345,10 +435,12 @@ color: #182638;
     margin-bottom: 0.4rem;
     }
     .member-name{
-        font-size: 14px;
+        font-size: var(--p2);
+        text-align: center;
     }
     .lab-item{
         width: 200%;
+    
     }
     .lab-item img{
         width: 98%;
@@ -382,4 +474,4 @@ color: #182638;
 
     }
    
-}    
+}

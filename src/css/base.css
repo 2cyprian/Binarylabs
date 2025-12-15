@@ -9,10 +9,11 @@
   --h1:46px;
   --h2:36px;
   --h3:24px;
-  
+  --p0:20px;
   --p1:18px;
   --p2:16px;
   --p3:14px;
+  --p4:12px;
 }
 *{
   box-sizing: border-box;
@@ -20,11 +21,13 @@
   
 }
 
+
 body {
   font-family: var(--font-family);
   width: 100%;
   color: var(--primary);
-
+  
+ 
 }
 a {
   color: var(--primary);

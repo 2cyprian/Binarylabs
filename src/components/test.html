@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Binary Footer</title>
+  <style>
+    :root{
+      --primary:#182638;
+      --accent:#CDDBFE;
+      --danger:#FF0000;
+      --white:#ffffff;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Arial,sans-serif}
+
+    footer{
+      background:var(--primary);
+      color:var(--white);
+      padding:64px 24px 24px;
+    }
+
+    .footer-container{
+      max-width:1248px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1fr 1fr;
+      gap:48px;
+    }
+
+    h4{
+      font-size:18px;
+      font-weight:500;
+      margin-bottom:16px;
+    }
+
+    p, a{
+      font-size:14px;
+      line-height:1.6;
+      color:var(--white);
+      text-decoration:none;
+    }
+
+    .muted{color:var(--accent)}
+    .danger{color:var(--danger)}
+
+    .stack{display:flex;flex-direction:column;gap:8px}
+    .links a{opacity:.9}
+    .links a:hover{opacity:1;text-decoration:underline}
+
+    .socials{display:flex;gap:16px;margin-top:16px}
+    .socials span{
+      width:24px;height:24px;
+      border-radius:50%;
+      background:var(--accent);
+      opacity:.8;
+    }
+
+    .newsletter{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .newsletter p{text-align:left}
+
+    .subscribe{
+      display:flex;
+      gap:12px;
+    }
+
+    .subscribe input{
+      flex:1;
+      height:45px;
+      border:1px solid var(--white);
+      background:transparent;
+      border-radius:8px;
+      padding:0 12px;
+      color:var(--white);
+    }
+
+    .subscribe button{
+      height:45px;
+      padding:0 24px;
+      border:1px solid var(--white);
+      background:transparent;
+      color:var(--white);
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    .divider{
+      margin:48px 0 16px;
+      border-top:.5px solid rgba(205,219,254,.45);
+    }
+
+    .footer-bottom{
+      max-width:1248px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .footer-bottom small{color:var(--accent)}
+
+    .policies{display:flex;gap:24px;flex-wrap:wrap}
+    .policies a{color:var(--accent)}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .footer-container{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:520px){
+      footer{padding:40px 16px 20px}
+      .footer-container{grid-template-columns:1fr;text-align:center}
+      .newsletter p{text-align:center}
+      .subscribe{flex-direction:column}
+      .footer-bottom{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+<footer>
+  <div class="footer-container">
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <h4>Stay Updated with Binary (Labs)</h4>
+      <p>Be the first to know about bootcamps, workshops, and tech insights from Binary (Labs).</p>
+      <div class="subscribe">
+        <input type="email" placeholder="Enter your email" />
+        <button>Join</button>
+      </div>
+      <p class="muted">Join thousands of learners advancing their tech careers</p>
+    </div>
+
+    <!-- Address & Contacts -->
+    <div class="stack">
+      <h4>Address</h4>
+      <p>Plot No 543, P.O Box 32485 Mbuyuni,</p>
+      <p>Kunduchi Dar es Salaam, Tanzania</p>
+
+      <h4 style="margin-top:16px">Contacts</h4>
+      <p>+255 758 828 363</p>
+      <p>binary.africa@gmail.com</p>
+
+      <div class="socials">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="stack links">
+      <h4>Useful Links</h4>
+      <a href="#">Our Journey</a>
+      <a href="#">Programs</a>
+      <a href="#">Labs</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- Working Hours -->
+    <div class="stack">
+      <h4>Working Hours</h4>
+      <div>
+        <p class="danger">Monday – Friday</p>
+        <p class="muted">8:30am – 5:00pm</p>
+      </div>
+      <div>
+        <p class="danger">Saturday</p>
+        <p class="muted">8:30am – 12:00pm</p>
+      </div>
+      <div>
+        <p class="danger">Closed on</p>
+        <p>Sunday & Public holidays</p>
+      </div>
+    </div> 
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="footer-bottom">
+    <small>© 2025 Binary. All rights reserved.</small>
+    <div class="policies">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

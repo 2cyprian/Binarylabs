@@ -1,52 +1,50 @@
-// Wait for navbar to be loaded, then initialize
-function initializeNavbar() {
+document.addEventListener('DOMContentLoaded', () => {
+
+    // -------------------------------
+    // 1️⃣ Set active link based on data-page
+    // -------------------------------
+    const currentPage = document.body.dataset.page; // get current page
+    const links = document.querySelectorAll('.nav-link');
+
+    links.forEach(link => {
+        if (link.dataset.page === currentPage) {
+            link.classList.add('active');
+        }
+    });
+
+    // -------------------------------
+    // 2️⃣ Initialize mobile navbar toggle
+    // -------------------------------
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navCollapse = document.querySelector('.nav-collapse');
     const overlay = document.querySelector('.mobile-overlay');
-    const hamburgerIcon = document.querySelector('.menu');
-    const closeIcon = document.querySelector('.close');
-    
-    // If elements aren't found, wait and try again
-    if (!mobileBtn || !navCollapse || !overlay) {
-        setTimeout(initializeNavbar, 100);
-        return;
-    }
+    const hamburgerIcon = document.querySelector('.menu'); // optional if you have icon switching
+    const closeIcon = document.querySelector('.close');    // optional if you have icon switching
 
     function toggleMenu() {
         if (!navCollapse || !overlay) return;
         const isActive = navCollapse.classList.toggle('active');
         overlay.classList.toggle('active');
-        
-        // Toggle Icon visibility
+
+        // Optional: toggle icon visibility if you have hamburger/close icons
         if (hamburgerIcon && closeIcon) {
-            if (isActive) {
-                hamburgerIcon.style.display = 'none';
-                closeIcon.style.display = 'inline-block';
-            } else {
-                hamburgerIcon.style.display = 'inline-block';
-                closeIcon.style.display = 'none';
-            }
+            hamburgerIcon.style.display = isActive ? 'none' : 'inline-block';
+            closeIcon.style.display = isActive ? 'inline-block' : 'none';
         }
     }
 
     // Event Listeners
     if (mobileBtn) mobileBtn.addEventListener('click', toggleMenu);
-    
-    // Close when clicking the overlay (background)
     if (overlay) overlay.addEventListener('click', toggleMenu);
 
-    // Close when clicking a link inside
+    // Close menu when clicking any nav link
     const navLinks = document.querySelectorAll('.nav-links a');
-    if (navLinks && navLinks.length && navCollapse) {
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navCollapse.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navCollapse.classList.contains('active')) {
+                toggleMenu();
+            }
         });
-    }
-}
+    });
 
-// Start initialization when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeNavbar);
+});

@@ -5,22 +5,20 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { font-family: var(--font-family); }
+body { font-family: var(--font-family); }   
+
 
 .navbar {
     background-color:transparent;
-    height: 80px;
-    align-items: center;
-    position: fixed; /* Stick to top */
-    top: 0;
-    border: none;
-    width: 100%;
-    z-index: 1000;
+      max-width: 1440px;
+    margin: 0 auto;
+    padding:0 20px;
 }
 
 
 
 .nav-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +28,7 @@ body { font-family: var(--font-family); }
 
 /* --- 1. LOGO --- */
 .nav-logo {
-  width: 45px;
+  width: 10rem;
   height: 50px;
   padding-left:1rem ;
   margin-left: 2rem;
@@ -71,6 +69,10 @@ body { font-family: var(--font-family); }
     font-size: var(--p1);
     font-weight: 500;
     transition: color 0.3s ease;
+}
+
+.nav-links a.active{
+    border-bottom: 2px solid var(--accent);
 }
 
 .nav-links a:hover{
@@ -126,7 +128,13 @@ body { font-family: var(--font-family); }
     display: none;
 }
 
-   
+  @media (max-width: 1200px) {
+    
+    .nav-btn-wrapper {
+        margin-left: 5rem;
+        margin-right:3rem ;
+    }
+  }
 /* =========================================
    RESPONSIVE (Mobile)
    ========================================= */

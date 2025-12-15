@@ -120,9 +120,7 @@
   animation: fadeInDown 0.8s ease-out 0.1s both;
 }
 
-#hero {
-  animation: scaleIn 0.9s ease-out 0.2s both;
-}
+
 
 /* -------- SECTION ANIMATIONS -------- */
 
@@ -238,6 +236,7 @@
   position: relative;
 }
 
+
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -252,6 +251,7 @@
 .nav-links a:hover::after {
   width: 100%;
 }
+
 
 /* -------- REDUCE MOTION SUPPORT -------- */
 
