@@ -16,12 +16,45 @@ async function loadNavbar() {
   try {
     const response = await fetch('../components/navbar.html');
     const html = await response.text();
-    document.getElementById('navbar-area').innerHTML = html;
-    updateActiveLink();
-    setupNavbarToggle();
+    const navbarContainer = document.getElementById('navbar-area') || document.getElementById('navbar');
+    if (navbarContainer) {
+      navbarContainer.innerHTML = html;
+      // Initialize navbar functionality AFTER HTML is loaded
+      initializeNavbar();
+    }
   } catch (error) {
     console.error('Error loading navbar:', error);
   }
+}
+
+// Initialize navbar toggle functionality
+function initializeNavbar() {
+  const mobileBtn = document.querySelector('.mobile-menu-btn');
+  const navCollapse = document.querySelector('.nav-collapse');
+  const overlay = document.querySelector('.mobile-overlay');
+
+  function toggleMenu() {
+    if (!navCollapse || !overlay) return;
+    navCollapse.classList.toggle('active');
+    overlay.classList.toggle('active');
+  }
+
+  if (mobileBtn) {
+    mobileBtn.addEventListener('click', toggleMenu);
+  }
+  if (overlay) {
+    overlay.addEventListener('click', toggleMenu);
+  }
+
+  // Close menu when clicking any nav link
+  const navLinks = document.querySelectorAll('.nav-links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navCollapse.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+  });
 }
 
 // Load footer component

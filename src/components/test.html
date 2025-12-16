@@ -1,200 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Binary Footer</title>
-  <style>
-    :root{
-      --primary:#182638;
-      --accent:#CDDBFE;
-      --danger:#FF0000;
-      --white:#ffffff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Labs Hero Section</title>
+    <!-- Importing Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Reset & Base Styles --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,system-ui,Arial,sans-serif}
+        body {
+            background-color: #F5F5F5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Mark Pro', 'Helvetica Neue', Arial, sans-serif;
+            overflow-x: hidden;
+        }
 
-    footer{
-      background:var(--primary);
-      color:var(--white);
-      padding:64px 24px 24px;
-    }
+        /* --- Frame 14: Main Container --- */
+        .hero-container {
+            position: relative;
+            max-width: 1440px; /* Fixed width per design */
+            height: auto ;
+            background: #FFFFFF;
+            overflow: hidden; /* Clips the overflowing visual elements */
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
 
-    .footer-container{
-      max-width:1248px;
-      margin:auto;
-      display:grid;
-      grid-template-columns:1.2fr 1fr 1fr 1fr;
-      gap:48px;
-    }
+        /* --- Frame 16: Navigation --- */
+        .navbar {
+            position: absolute;
+            top: 28px;
+            left: 64px;
+            width: calc(100% - 128px);
+            height: 56px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
 
-    h4{
-      font-size:18px;
-      font-weight:500;
-      margin-bottom:16px;
-    }
+       
+        /* CTA Button */
+        .cta-button {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 30px;
+            width: 221px;
+            height: 56px;
+            border: 1px solid #B60000;
+            border-radius: 30px;
+            text-decoration: none;
+            
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #B60000;
+            transition: background 0.3s, color 0.3s;
+        }
 
-    p, a{
-      font-size:14px;
-      line-height:1.6;
-      color:var(--white);
-      text-decoration:none;
-    }
+        .cta-button:hover {
+            background-color: #B60000;
+            color: #FFFFFF;
+        }
 
-    .muted{color:var(--accent)}
-    .danger{color:var(--danger)}
+        /* --- Content Wrapper --- */
+        /* Used to position content relative to the absolute coordinates */
+        .content-wrapper {
+            position: absolute;
+            top: 133px;
+            left: 64px;
+            width: 100%;
+        }
 
-    .stack{display:flex;flex-direction:column;gap:8px}
-    .links a{opacity:.9}
-    .links a:hover{opacity:1;text-decoration:underline}
+        /* --- Frame 25: Text Content --- */
+        .text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            width: 663px;
+            z-index: 5;
+            position: relative;
+        }
 
-    .socials{display:flex;gap:16px;margin-top:16px}
-    .socials span{
-      width:24px;height:24px;
-      border-radius:50%;
-      background:var(--accent);
-      opacity:.8;
-    }
+        .headlines {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
 
-    .newsletter{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
+        .headlines h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 46px;
+            line-height: 69px;
+            color: #1F2937;
+        }
 
-    .newsletter p{text-align:left}
+        .headlines p {
+            font-family: 'Mark Pro', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 25px;
+            color: rgba(31, 41, 55, 0.8);
+        }
 
-    .subscribe{
-      display:flex;
-      gap:12px;
-    }
+        /* Frame 22: Stats */
+        .stats-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 45px;
+        }
 
-    .subscribe input{
-      flex:1;
-      height:45px;
-      border:1px solid var(--white);
-      background:transparent;
-      border-radius:8px;
-      padding:0 12px;
-      color:var(--white);
-    }
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            width: 157px;
+        }
 
-    .subscribe button{
-      height:45px;
-      padding:0 24px;
-      border:1px solid var(--white);
-      background:transparent;
-      color:var(--white);
-      border-radius:8px;
-      cursor:pointer;
-    }
+        .stat-num {
+            font-family: 'Mark Pro', sans-serif;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 46px;
+            color: #1F2937;
+        }
 
-    .divider{
-      margin:48px 0 16px;
-      border-top:.5px solid rgba(205,219,254,.45);
-    }
+        .stat-desc {
+            font-family: 'Mark Pro', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;
+            color: rgba(31, 41, 55, 0.8);
+        }
 
-    .footer-bottom{
-      max-width:1248px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:24px;
-      flex-wrap:wrap;
-    }
+        /* --- Group 1: Hero Visual --- */
+        /* Positioned absolute relative to the main Frame 14 to match coordinates */
+        .hero-visual {
+            position: absolute;
+            width: 702px;
+            height: 664px;
+            left: 706px;
+            top: 15px; /* Coordinate from Group 1 */
+            pointer-events: none;
+        }
 
-    .footer-bottom small{color:var(--accent)}
+        /* Ellipse 3 */
+        .visual-gradient-bg {
+            position: absolute;
+            width: 560px;
+            height: 490px;
+            left: 0px;
+            top: 0px;
+            background: linear-gradient(180deg, #B60000 0%, rgba(31, 41, 55, 0.8) 100%);
+            transform: rotate(-21.96deg);
+            border-radius: 50%;
+            opacity: 0.9;
+        }
 
-    .policies{display:flex;gap:24px;flex-wrap:wrap}
-    .policies a{color:var(--accent)}
+        /* Ellipse 4 */
+        .visual-image-container {
+            position: absolute;
+            width: 560px;
+            height: 480px;
+            left: 91px; /* Calculated from relative group positions (797 - 706) */
+            top: 84px;  /* Calculated from relative group positions (99.5 - 15) */
+            border-radius: 50%;
+            
+            /* Placeholder for binary3.jpg */
+            background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+        }
 
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      .footer-container{grid-template-columns:1fr 1fr}
-    }
+        /* --- Footer: Trusted By --- */
+        .footer-section {
+            position: absolute;
+            width: 1315px;
+            height: 30px;
+            left: 64px;
+            top: 624px;
+            display: flex;
+            align-items: center;
+        }
 
-    @media(max-width:520px){
-      footer{padding:40px 16px 20px}
-      .footer-container{grid-template-columns:1fr;text-align:center}
-      .newsletter p{text-align:center}
-      .subscribe{flex-direction:column}
-      .footer-bottom{flex-direction:column;text-align:center}
-    }
-  </style>
+        .trusted-label {
+            font-family: 'Mark Pro', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 25px;
+            color: #1F2937;
+            margin-right: 50px;
+            white-space: nowrap;
+            z-index: 2;
+            background: #fff;
+            padding-right: 20px;
+        }
+
+        /* Marquee Animation for Logos */
+        .marquee-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 60px;
+            width: max-content;
+            animation: scroll 25s linear infinite;
+        }
+
+        .logo-item {
+            height: 24px;
+            opacity: 0.6;
+            filter: grayscale(100%);
+            display: flex;
+            align-items: center;
+            font-size: 14px; 
+            font-weight: bold;
+            color: #333;
+        }
+        
+        /* Placeholder Images for Logos */
+        .logo-item img {
+            height: 100%;
+            width: auto;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Responsive Scaling for smaller screens */
+        @media (max-width: 1440px) {
+            .hero-container {
+                width: 100%;
+                height: auto;
+                min-height: 704px;
+                padding-bottom: 50px;
+            }
+            .hero-visual {
+                left: 55%;
+                opacity: 0.5; /* Fade out visual on smaller desktops to make text readable */
+            }
+            .navbar, .footer-section {
+                width: calc(100% - 128px);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-visual { display: none; }
+            .content-wrapper { position: static; margin-top: 120px; padding: 0 64px; }
+            .text-content { width: 100%; }
+            .navbar { width: calc(100% - 40px); left: 20px; }
+            .footer-section { position: relative; top: 0; margin-top: 60px; left: 20px; width: calc(100% - 40px); }
+            .nav-links { display: none; } /* Simplified nav for mobile */
+        }
+    </style>
 </head>
 <body>
 
-<footer>
-  <div class="footer-container">
+    <main class="hero-container">
+        
+        <!-- Frame 16 -->
+      
 
-    <!-- Newsletter -->
-    <div class="newsletter">
-      <h4>Stay Updated with Binary (Labs)</h4>
-      <p>Be the first to know about bootcamps, workshops, and tech insights from Binary (Labs).</p>
-      <div class="subscribe">
-        <input type="email" placeholder="Enter your email" />
-        <button>Join</button>
-      </div>
-      <p class="muted">Join thousands of learners advancing their tech careers</p>
-    </div>
+        <!-- Group 1: Hero Visual -->
+        <!-- Placed here to respect z-index layering relative to content -->
+        <div class="hero-visual">
+            <div class="visual-gradient-bg"></div>
+            <div class="visual-image-container"></div>
+        </div>
 
-    <!-- Address & Contacts -->
-    <div class="stack">
-      <h4>Address</h4>
-      <p>Plot No 543, P.O Box 32485 Mbuyuni,</p>
-      <p>Kunduchi Dar es Salaam, Tanzania</p>
+        <div class="content-wrapper">
+            <!-- Frame 25: Text Content -->
+            <div class="text-content">
+                <div class="headlines">
+                    <h1>Binary (Labs) Retools & Upskills Grad Students & Professionals</h1>
+                    <p>We are founded on a mission to RETOOL & UPSKILL technical talent and teams among graduates and professionals with the focus on real-world hands-on domain specific tech industry skills.</p>
+                </div>
 
-      <h4 style="margin-top:16px">Contacts</h4>
-      <p>+255 758 828 363</p>
-      <p>binary.africa@gmail.com</p>
+                <!-- Frame 22: Stats -->
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <span class="stat-num">500+</span>
+                        <span class="stat-desc">Graduates Upskilled</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">89%</span>
+                        <span class="stat-desc">Job Placement Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">200+</span>
+                        <span class="stat-desc">Projects Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-      <div class="socials">
-        <span></span><span></span><span></span><span></span>
-      </div>
-    </div>
+        <!-- Frame 27 & 28: Footer / Trusted By -->
+        <div class="footer-section">
+            <span class="trusted-label">Trusted By:</span>
+            
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <!-- Placeholders for images: 'the-linux-foundation.png', etc. -->
+                    <div class="logo-item"><img src="https://placehold.co/100x24/transparent/1F2937?text=Linux+Foundation" alt="Linux"></div>
+                    <div class="logo-item"><img src="https://placehold.co/100x24/transparent/1F2937?text=Internet+Society" alt="Internet Society"></div>
+                    <div class="logo-item"><img src="https://placehold.co/100x24/transparent/1F2937?text=Python+Foundation" alt="Python"></div>
+                    <div class="logo-item"><img src="https://placehold.co/60x24/transparent/1F2937?text=Irabu" alt="Irabu"></div>
+                    
+                    <!-- Duplicates for Loop -->
+                    <div class="logo-item"><img src="https://placehold.co/100x24/transparent/1F2937?text=Linux+Foundation" alt="Linux"></div>
+                    <div class="logo-item"><img src="https://placehold.co/100x24/transparent/1F2937?text=Internet+Society" alt="Internet Society"></div>
+                    <div class="logo-item"><img src="https://placehold.co/100x24/transparent/1F2937?text=Python+Foundation" alt="Python"></div>
+                    <div class="logo-item"><img src="https://placehold.co/60x24/transparent/1F2937?text=Irabu" alt="Irabu"></div>
 
-    <!-- Useful Links -->
-    <div class="stack links">
-      <h4>Useful Links</h4>
-      <a href="#">Our Journey</a>
-      <a href="#">Programs</a>
-      <a href="#">Labs</a>
-      <a href="#">Careers</a>
-      <a href="#">Contact</a>
-    </div>
+                    <!-- Duplicates for Loop -->
+                    <div class="logo-item"><img src="https://placehold.co/100x24/transparent/1F2937?text=Linux+Foundation" alt="Linux"></div>
+                    <div class="logo-item"><img src="https://placehold.co/100x24/transparent/1F2937?text=Internet+Society" alt="Internet Society"></div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Working Hours -->
-    <div class="stack">
-      <h4>Working Hours</h4>
-      <div>
-        <p class="danger">Monday – Friday</p>
-        <p class="muted">8:30am – 5:00pm</p>
-      </div>
-      <div>
-        <p class="danger">Saturday</p>
-        <p class="muted">8:30am – 12:00pm</p>
-      </div>
-      <div>
-        <p class="danger">Closed on</p>
-        <p>Sunday & Public holidays</p>
-      </div>
-    </div> 
-
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="footer-bottom">
-    <small>© 2025 Binary. All rights reserved.</small>
-    <div class="policies">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Cookies</a>
-    </div>
-  </div>
-</footer>
+    </main>
 
 </body>
 </html>

@@ -1,6 +1,5 @@
 .hero {
     position: relative;
-    padding: 5px;
     color: var(--primary);
     background-color: transparent;
     overflow: hidden;
@@ -10,14 +9,23 @@
       max-width: 1440px;
       margin: 0 auto;
       padding: 0 20px;
+      
+      top: 0;
     
     }
 .hero-main {
     display: grid;
     grid-template-columns: 1fr 1.2fr; /* Desktop: Side by side */
     gap: 10px;
-    align-items: center;
-    margin-bottom: 80px;
+}
+.hero-content{
+      display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 663px;
+            z-index: 5;
+            position: relative;
+
 }
 
 /* --- LEFT COLUMN: TEXT --- */
@@ -25,8 +33,8 @@
 .hero-content h1 {
     color: var(--primary);
     font-size: var(--h1);
-    line-height: 1.4;
-    font-weight: 700;
+      font-weight: 700;
+     line-height: 69px;
     margin-bottom: 5px;
     
     
@@ -36,10 +44,11 @@
 
 
 .hero-desc {
-    font-size: var(--p1);
+    font-size: var(--p0);
     color: var(--text-secondary);
     margin-bottom: 10px;
-    line-height: 1.5;
+    font-weight: 400;
+    line-height: 30px;
 }
 
 /* Pills / Chips */
@@ -86,46 +95,30 @@
     font-size: var(--h2);
     color: var(--primary);
     margin-bottom: 2px;
+    line-height: 36px;
 }
 .stats p {
     color: var(--primary);
-    font-size: var(--p3);
+    font-size: var(--p2);
+  font-weight: 400;
+  line-height:20px ;
+
 }
 
 /* --- RIGHT COLUMN: COMPLEX VISUAL --- */
 .hero-visual {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     
+            width: clamp(300px, 100%, 702px);
+            height: clamp(300px, 90vh, 664px);
+            margin-top: -4rem;
+            left: 50px; /* Calculated from relative group positions (797 - 706) */
+            top: 0;  /* Calculated from relative group positions (99.5 - 15) */
+            background-image: url('/assets/hero.svg');
+            background-size: cover;
+            background-position: center;
 
 }
-
-@media (max-width:1024px){
-    .hero-content h1{
-        font-size: var(--h2);
-    }
-    .hero-visual {
-        right: -3rem;
-         top: -2rem;
-    }
-    .hero-visual img{
-         width: clamp(500px, 40vw, 35rem);
-            height: auto;
-    }
-    .stats{
-        margin: 0;
-        padding: 0;
-    }
-
-}
-.hero-visual img {
-    width: clamp(35rem, 45vw, 40rem);
-    top: 0;
-    height: auto;
-    object-fit: cover;
-}
+  /* El
 
 /* =========================================
    4. TRUSTED BY MARQUEE
@@ -133,13 +126,13 @@
 .trusted-section {
     background: #ffffff;
    /* Fully rounded pill shape */
-    padding: 15px 40px;
+    padding:0 1rem;
     display: flex;
     align-items: center;
     gap: 30px;
     position: relative;
     z-index: 3;
-  margin-top: 1%;
+  margin: 5% 0;
   
 
 }
@@ -187,20 +180,52 @@
 /* Move half distance (because duplicated) */
 }
 
+/* =========================================
+    TABLET (1024px) OPTIMIZATIONS
+    ========================================= */
+@media (max-width: 1024px) {
+     .hero-main {
+          grid-template-columns: 1fr 1fr;
+          gap: 2px;
+     }
 
-@media (max-width:1190px) {
-    .hero {
-        height: auto;
-        padding-top: 2rem;
-    }
-    
+     .hero-content {
+          width: 100%;
+          gap: 10px;
+     }
+
+     .hero-content h1 {
+          font-size: var(--h2);
+          line-height: 1.7;
+     }
+
+     .hero-visual {
+          width: 100%;
+          height: auto;
+          margin-top: -3rem;
+          left: 0;
+     }
+
+     .stats {
+          gap: 3rem;
+          margin-top: 0.5rem;
+     }
+
+     .stats h2 {
+          font-size: 28px;
+     }
+
+     .trusted-section {
+          padding: 0 1rem;
+          gap: 20px;
+          margin: 8rem 0 1rem 0;
+     }
+
+     .marquee-track {
+          animation: marquee 3s linear infinite;
+     }
 }
-@media(min-width:1800px) {
-   .hero-visual{
-    right:25%;
-   }
-    
-}
+
 /* =========================================
    5. RESPONSIVE STYLES
    ========================================= */

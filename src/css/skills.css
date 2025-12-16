@@ -203,17 +203,7 @@
     }
 
     /* Responsive */
-    @media (max-width: 1024px) {
-      .success-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .testimonial-image {
-        position: static;
-        margin-top: 24px;
-        align-self: flex-end;
-      }
-    }
+    
 
     @media (max-width: 640px) {
       .success-section {
@@ -231,19 +221,6 @@
 
 
 
-@media (max-width: 1024px){
-    .overview .container{
-        height:auto;
-        
-    }
-    .overview-item{
-        height:auto ;
-    }
-    .overview-content{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
 
 
 /* Responsive */

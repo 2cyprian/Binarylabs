@@ -1,0 +1,290 @@
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+    max-width: 700px;
+    width: 90%;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #f0f0f0;
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: var(--primary);
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+    color: var(--accent);
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+/* Form Styles in Modal */
+.modal-body .registration-card {
+    max-width: 100%;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+.modal-body .header-section {
+    display: none; /* Hide header since modal has it */
+}
+
+.modal-body .form-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.modal-body .form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.modal-body .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.modal-body .input-group label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.modal-body .input-field,
+.modal-body .select-field {
+    width: 100%;
+    height: 48px;
+    padding: 12px 10px;
+    border: 1px solid rgba(24, 38, 56, 0.7);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #182638;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.modal-body .select-field {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23182638' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    border: 1px solid #182638;
+    padding-right: 40px;
+}
+
+.modal-body .input-field::placeholder {
+    color: rgba(24, 38, 56, 0.4);
+    font-size: 12px;
+}
+
+.modal-body .input-field:focus,
+.modal-body .select-field:focus {
+    border-color: #182638;
+    border-width: 2px;
+}
+
+.modal-body .upload-box {
+    width: 100%;
+    height: 178px;
+    background: rgba(24, 38, 56, 0.03);
+    border: 2px dashed rgba(24, 38, 56, 0.4);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.modal-body .upload-box.drag-over {
+    background: rgba(24, 38, 56, 0.1);
+    border-color: #182638;
+}
+
+.modal-body .upload-icon {
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23182638' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/%3e%3cpolyline points='17 8 12 3 7 8'/%3e%3cline x1='12' y1='3' x2='12' y2='15'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-body .upload-text-main {
+    font-size: 16px;
+    color: rgba(24, 38, 56, 0.4);
+    pointer-events: none;
+}
+
+.modal-body .upload-text-sub {
+    font-size: 14px;
+    color: rgba(24, 38, 56, 0.4);
+    pointer-events: none;
+}
+
+.modal-body .submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    background: #B60000;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    color: #CDDBFE;
+}
+
+.modal-body .submit-btn:hover {
+    background: #900000;
+}
+
+.modal-body .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.modal-body .checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.modal-body .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.modal-body .checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #182638;
+}
+
+.modal-body .checkbox-item span {
+    font-size: 12px;
+    color: #182638;
+}
+
+.modal-body .input-error {
+  border: 1px solid #B60000 !important;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .modal-header {
+        padding: 16px;
+    }
+
+    .modal-header h2 {
+        font-size: 20px;
+    }
+
+    .modal-body {
+        padding: 16px;
+    }
+
+    .modal-body .form-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .modal-body .input-group {
+        flex: 1;
+    }
+}

@@ -108,8 +108,16 @@
 
     @media(max-width:520px){
       footer{padding:40px 16px 20px}
-      .footer-container{grid-template-columns:1fr;text-align:center}
-      .newsletter p{text-align:center}
+      .footer-container{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:24px;
+      }
+      .newsletter p{text-align:left}
+    
       .subscribe{flex-direction:column}
+        .subscribe input{
+        height:40px;  
+        padding:1rem;
+      }
       .footer-bottom{flex-direction:column;text-align:center}
     }

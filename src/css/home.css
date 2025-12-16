@@ -200,17 +200,7 @@
       display: block;
     }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .cta-card {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .cta-image {
-        height: 320px;
-      }
-    }
+   
 
     @media (max-width: 640px) {
       .cta-section {

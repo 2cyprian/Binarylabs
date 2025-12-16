@@ -40,16 +40,6 @@ a {
 }
 
 /* Ensure navbar is fixed and content starts below it */
-#navbar,
-.navbar-area {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  min-height: var(--navbar-height);
-  background-color: var(--white);
-}
 
 /* Push main content below fixed navbar */
 
@@ -87,4 +77,13 @@ p{
     width: calc(100% / 1.15);
     margin: auto;
   }
+}
+@media (max-width: 1024px) {
+  body {
+    transform: scale(0.99);
+    width: calc(100% / 0.99);
+    margin:auto;
+    padding: 0;
+  }
+ 
 }

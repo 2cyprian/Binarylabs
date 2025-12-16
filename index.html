@@ -1,15 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url='/src/pages/home.html'" />
-    <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Brand - Home</title>
+  <meta name="description" content="Professional services and solutions for your business needs.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicons -->
+   <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
     <link rel="shortcut icon" href="/assets/favicon/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="stylesheet" href="/src/css/base.css">
+  <link rel="stylesheet" href="/src/css/navbar.css">
+  <link rel="stylesheet" href="/src/css/modal.css">
+  <link rel="stylesheet" href="/src/css/layout.css">
+  <link rel="stylesheet" href="/src/css/footer.css">
+
+  <link rel="stylesheet" href="/src/css/hero.css">
+  <link rel="stylesheet" href="/src/css/home.css">
+  <link rel="stylesheet " href="/src/css/skills.css">
+  <link rel="stylesheet" href="/src/css/subhero.css">
+  <link rel="stylesheet" href="/src/css/animations.css">
 </head>
-<body>
-    <!-- <p>If you are not redirected, <a href="home.html">click here</a>.</p> -->
+<body data-page="home" >
+  <div id="navbar" class="site-scale" ></div>
+  
+  <main  class="site-scale">
+    <section class="hero">
+      
+      <div id="hero"></div>
+    </section>
+
+
+    <section class="about-us">
+      <div class="about-container">
+        <h2 class="lined-heading">About Us</h2>
+        <p>
+          Our MISSION is to enable graduates and professional teams to be 
+          RETOOLED and UPSKILLED with hands-on knowledge to match 
+          todays in-demand technical skills and careers opportunities. We 
+          are founded on a mission that is centered around under-graduates 
+          with a focus on Industry needs and through our peer-based 
+          collaborative learning approach, we deliver 90% curated hands-on 
+          specialised technical skills that are in-demand by the industry today 
+          across Africa.
+        </p>
+      </div>
+      <div class="about-image">
+        <img src="/assets/binary5.jpg" alt="About Us Image">
+      </div>
+    </section>
+    <section class="services">
+      <h2 class="lined-heading">Retool & Upskill at Binary (Labs)</h2>
+      <div class="services-container">
+        <div class="service-card">
+         <span class="service-head">
+          <img src="/assets/icons//la_tools.svg"/>
+          <h3>Hands-on Skills</h3>
+         </span> 
+          <p>Our cohorts acquire hands-on skills & abilities through learning from experts 
+            practicallly in our extensive lab 
+            enviroment facilitated by experienced 
+            expert instructors and facilitators.</p>
+         <span class="details">To show you know............</span>
+
+        </div>
+        <div class="service-card">
+          <span class="service-head">
+               <img src="/assets/icons/mdi_teach-poll.svg"/>
+          <h3>Expert Mentorship</h3>
+          </span>
+         
+          <p>Binary (Labs) has assembled a team of 
+            mentors who are veterans with a track 
+            record of designing and deploying 
+            technology products & services for 
+            successful companies across AFRICA.</p>
+         <span class="details">To teach you how............</span>
+
+        </div>
+        <div class="service-card end">
+          <span class="service-head">
+              <img src="/assets/icons/fa7-solid_people-line.svg"/>
+          <h3>Industry Collaboration</h3>
+          </span>
+          
+          <p>Our core value is centered around 
+              collaboration with Institutions and the
+              Industry in order to collectively develop
+              skilled technical talent with domain-
+              specific hands-on expertise.</p>
+         <span class="details">To challenge you further............</span>
+        </div>
+
+      </div>
+
+    </section>
+   
+<section class="cta-section">
+  <div class="cta-card">
+
+    <!-- Left content -->
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to Upskill and Transform Your Career?</h2>
+      <p class="cta-description">
+        Join our hands-on programs and become industry‑ready in just a few months.
+      </p>
+
+      <div class="cta-actions">
+        <a href="#" class="btn btn-secondary">Join Our Bootcamps</a>
+      </div>
+    </div>
+
+    <!-- Right image -->
+    <div class="cta-image">
+      <img src="/assets//binary.png" alt="Binary Labs Training" />
+    </div>
+
+  </div>
+</section>
+
+  </main>
+  
+  <div id="footer"></div>
+  
+  <script type="module" src="/src/js/components.js" defer></script>
+  <script src="/src/js/component/hero.js" defer></script>
+  <script src="/src/js/lazyload.js" defer></script>
+  
 </body>
 </html>

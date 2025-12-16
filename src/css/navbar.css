@@ -13,6 +13,7 @@ body { font-family: var(--font-family); }
       max-width: 1440px;
     margin: 0 auto;
     padding:0 20px;
+    position: relative;
 }
 
 
@@ -46,6 +47,7 @@ body { font-family: var(--font-family); }
 .nav-collapse {
     display: flex;
     gap: 35px;
+    align-items: center;
 }
 
 /* However, we want links in middle and button at end. 
@@ -107,16 +109,16 @@ body { font-family: var(--font-family); }
 }
 /* --- MOBILE TOGGLE --- */
 .mobile-menu-btn {
-    display: none; /* Hidden on desktop */
+    display: none;
+    align-items: center;
+    justify-content: center;
     border: none;
     width: 32px;
     height: 32px;
     background-color: var(--accent);
     font-size: var(--h3);
     cursor: pointer;
-    justify-content: center;
     border-radius: 4px;
-
     z-index: 1002;
 }
 .mobile-menu-btn i{
@@ -126,6 +128,18 @@ body { font-family: var(--font-family); }
 
 .mobile-overlay {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997;
+    pointer-events: auto;
+}
+
+.mobile-overlay.active {
+    display: block;
 }
 
   @media (max-width: 1200px) {
@@ -139,9 +153,26 @@ body { font-family: var(--font-family); }
    RESPONSIVE (Mobile)
    ========================================= */
 @media (max-width: 992px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        z-index: 998;
+        background-color: var(--white);
+    }
+
+    .nav-container {
+        position: relative;
+    }
+
     .mobile-menu-btn {
-        display:block;
-        margin-right: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 1.5rem;
     }
     .nav-logo{
         margin:0;
@@ -149,26 +180,28 @@ body { font-family: var(--font-family); }
 
     /* Hide navigation links and CTA button by default on mobile */
     .nav-collapse {
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
-        top: -100%; /* Hidden above the screen */
+        top: 80px;
         width: 100%;
-         background-color: var(--white);
+        background-color: var(--white);
         flex-direction: column;
         align-items: flex-start;
-        padding: 30px 20px;
-        transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        /* z-index: 1003; */
+        padding: 20px;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1000;
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        opacity: 0;
         visibility: hidden;
+        pointer-events: none;
     }
 
     /* Class added by JS to show menu */
     .nav-collapse.active {
-        top: 100%; /* Slide down from navbar */
         opacity: 1;
         visibility: visible;
+        pointer-events: auto;
     }
 
     /* Stack links vertically */
@@ -180,10 +213,6 @@ body { font-family: var(--font-family); }
         padding: 20px ;
         border: 2px solid hsla(8, 100%, 59%,0.4);
         width: 100%;
-        
-    
-
-        
     }
 
     .nav-links a {
@@ -198,30 +227,12 @@ body { font-family: var(--font-family); }
         border-radius: 26px;
          border: 2px solid var(--text);
          margin: 0;
-        
-            
-            
-                
-    
     }
 
     .btn-nav-cta {
          text-align: center;
          padding: 10px;
          border: none;
-            width: 100%
-         
-    ;
-    }
-
-    /* Background Overlay for mobile */
-    .mobile-overlay.active {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1000;
+         width: 100%;
     }
 }

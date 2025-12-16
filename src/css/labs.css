@@ -275,11 +275,11 @@
     font-size: 1rem;
     font-weight: 700;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;     
     }
-    .avatar-circle{
-        width: clamp(70px, 8vw, 95px);
-        height: clamp(70px, 8vw, 100px);
+    .avatar-circle{                                                  
+        width: clamp(60px, 8vw, 90px);
+        height: clamp(70px, 8vw, 95px);
 }
 .avatar-circle img{
     width: 100%;
@@ -323,71 +323,7 @@ color: #182638;
     flex-direction: row;
     gap: 0.3rem;
 }
-@media (max-width: 1024px) {
 
-    .labs-container{
-        height: auto;
-        padding-bottom: 2rem;
-    }
-    .labs-text{
-        max-width: 500px;
-    }
-    .labs-text h3{
-        font-size: var(--h3);
-    }
-    .labs-text .labs-p{
-        font-size: var(--p3);
-    
-    }
-    .labs-values{
-        gap: 4px;
-    }
-    .labs-about{
-        max-width: 600px;
-    }
-    .labs-grid{
-        flex-direction: column;
-        width: 100%;
-    }
-    .labs-grid-row{
-        width: 100%;
-    }
-    .labs-grid-row .right{
-        flex-direction: column;
-        align-items: center;
-    }
-    .values-list{
-        width: 11rem;
-        height: auto;
-        gap: 4px;
-        left: 40%;
-    } 
-    .values-list p{
-        font-size: var(--p4);
-    }
-    .values-list h3{
-        font-size: var(--p1);
-
-    }
-     .labs-grid{
-        flex-direction: row;
-     }
-    .labs-grid-row img{
-        width: 90%;
-}
-.experts-section{
-    width: 100%;
-   
-}
-.values-section{
-    width: 100%;
- 
-}
-.avatar-circle{
-    width: clamp(50px, 8vw, 80px);
-    height: clamp(50px, 8vw, 80px);
-}
-}
 @media (max-width: 786px) {
     .labs-container{
         width: 100%;
