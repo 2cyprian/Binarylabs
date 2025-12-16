@@ -36,11 +36,9 @@ for employability and operating IP network with single ISP provider connectivity
         link: "Administrator and Enterprise Network"
     },
     {
-        title: "DevOps Engineering",
+        title: "AI & Automation ",
         icon: "/assets/icons/code.svg",
-        desc: `The Python has become one of the most sough high-level programming languages in the world and learning to write code and program in Python
-Language is a significant added advantage towards
-employability and innovative software developers mindset.`,
+        desc: `Python is one of the world’s most widely used high-level programming languages. Mastering Python strengthens problem-solving skills, boosts employability, and enables developers to build intelligent and automated systems`,
         link: "Design and Engineer System"
     }
 ];
