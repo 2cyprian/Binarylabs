@@ -80,8 +80,8 @@ p{
 }
 @media (max-width: 1024px) {
   body {
-    transform: scale(0.99);
-    width: calc(100% / 0.99);
+    transform: scale(0.98);
+    width: calc(100% / 0.98);
     margin:auto;
     padding: 0;
   }

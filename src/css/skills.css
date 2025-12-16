@@ -221,6 +221,135 @@
 
 
 
+/* Container: remove fixed height, fix padding */
+.overview .container{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 32px);
+}
+
+/* Responsive grid for overview items */
+.overview-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(16px, 2.5vw, 32px);
+  margin-top: 0.5rem;
+  overflow: visible; /* avoid clipping */
+}
+
+/* Let items and cards size naturally */
+.overview-item{
+  width: 100%;
+  height: auto;
+}
+
+.card{
+  height: auto;           /* was fixed: 25rem */
+  min-height: 20rem;      /* optional baseline */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Success section spacing stays fluid */
+.success-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 48px);
+}
+
+.success-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+}
+
+/* Testimonial image scales instead of overflowing */
+.testimonial-image {
+  right: -6px;
+  width: clamp(120px, 22vw, 180px);
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* --- Breakpoints --- */
+
+@media (max-width: 1024px) {
+  .success-section {
+    padding: clamp(24px, 3vw, 36px);
+  }
+
+  .success-grid {
+    gap: clamp(32px, 3vw, 48px);
+  }
+
+  .section-title {
+    font-size: clamp(20px, 3vw, 28px);
+  }
+
+  .section-description {
+    font-size: clamp(14px, 1.8vw, 16px);
+  }
+
+  .testimonial-card {
+    padding: clamp(20px, 3vw, 28px);
+    min-height: 200px;
+  }
+
+  .testimonial-text {
+    font-size: clamp(14px, 1.6vw, 16px);
+  }
+
+  .testimonial-author {
+    font-size: clamp(14px, 1.6vw, 16px);
+  }
+
+  .testimonial-image {
+    width: clamp(100px, 18vw, 150px);
+  }
+}
+
+
+@media (max-width: 900px) {
+  .success-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonial-card {
+    padding: clamp(20px, 4vw, 28px);
+  }
+  .testimonial-image {
+    position: static;
+    width: min(60%, 260px);
+    max-width: 100%;
+    align-self: flex-end;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 768px){
+  .overview .container{
+    padding: clamp(12px, 3vw, 16px);
+  }
+  /* One column on tablets/phones */
+  .overview-content{
+    grid-template-columns: 1fr;
+  }
+  .card{
+    min-height: unset; /* allow content-driven height */
+  }
+}
+
+@media (max-width: 680px){
+  .overview .container{
+    padding: 1rem;
+  }
+  /* Typography rules below can stay as-is */
+  .overview-item{
+    width: 100%;
+    height: auto;
+  }
+}
 
 
 /* Responsive */

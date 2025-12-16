@@ -227,6 +227,10 @@
 .btn-nav-cta:hover {
   animation: none;
   transform: translateY(-2px) scale(1.05);
+  
+}
+.nav-links a.btn-nav-cta::after{
+  content: none !important;
 }
 
 /* -------- NAVBAR ANIMATIONS -------- */

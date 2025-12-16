@@ -13,18 +13,21 @@
 
 .modal.active {
     display: flex;
-    align-items: center;
+
+    align-items: flex-start;
     justify-content: center;
+    padding-top: 24px;
 }
 
 .modal-content {
     background-color: var(--white);
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    max-height: 90vh;
-    max-width: 700px;
-    width: 90%;
-    overflow-y: auto;
+    width: clamp(520px, 62vw, 1100px);
+    max-height: calc(100vh - 32px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
     animation: slideUp 0.3s ease;
 }
 
@@ -32,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: clamp(20px, 2.2vw, 28px);
     border-bottom: 1px solid #f0f0f0;
     position: sticky;
     top: 0;
@@ -41,18 +44,18 @@
 
 .modal-header h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: clamp(20px, 2vw, 28px);
     color: var(--primary);
 }
 
 .modal-close-btn {
     background: none;
     border: none;
-    font-size: 28px;
+    font-size: clamp(22px, 2.2vw, 30px);
     cursor: pointer;
     color: var(--text);
-    width: 32px;
-    height: 32px;
+    width: clamp(28px, 2.6vw, 40px);
+    height: clamp(28px, 2.6vw, 40px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +67,8 @@
 }
 
 .modal-body {
-    padding: 24px;
+    padding: clamp(16px, 2vw, 24px);
+    overflow-y: auto;
 }
 
 /* Form Styles in Modal */
@@ -81,16 +85,17 @@
 }
 
 .modal-body .form-container {
+    width: 100%;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: clamp(12px, 2vw, 24px);
 }
 
 .modal-body .form-row {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(12px, 2vw, 24px);
     width: 100%;
     align-items: stretch;
 }
@@ -104,7 +109,7 @@
 
 .modal-body .input-group label {
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(14px, 1.2vw, 18px);
     line-height: 24px;
     color: #000000;
 }
@@ -112,12 +117,12 @@
 .modal-body .input-field,
 .modal-body .select-field {
     width: 100%;
-    height: 48px;
-    padding: 12px 10px;
+    min-height: clamp(44px, 6.4vh, 56px);
+    padding: clamp(10px, 1.6vw, 12px) 10px;
     border: 1px solid rgba(24, 38, 56, 0.7);
     border-radius: 8px;
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: clamp(14px, 0.95vw, 18px);
     color: #182638;
     outline: none;
     transition: border-color 0.2s;
@@ -135,7 +140,7 @@
 
 .modal-body .input-field::placeholder {
     color: rgba(24, 38, 56, 0.4);
-    font-size: 12px;
+    font-size: clamp(12px, 0.8vw, 14px);
 }
 
 .modal-body .input-field:focus,
@@ -146,7 +151,7 @@
 
 .modal-body .upload-box {
     width: 100%;
-    height: 178px;
+    height: clamp(178px, 24vh, 320px);
     background: rgba(24, 38, 56, 0.03);
     border: 2px dashed rgba(24, 38, 56, 0.4);
     border-radius: 16px;
@@ -173,13 +178,13 @@
 }
 
 .modal-body .upload-text-main {
-    font-size: 16px;
+    font-size: clamp(14px, 1.2vw, 18px);
     color: rgba(24, 38, 56, 0.4);
     pointer-events: none;
 }
 
 .modal-body .upload-text-sub {
-    font-size: 14px;
+    font-size: clamp(12px, 1vw, 16px);
     color: rgba(24, 38, 56, 0.4);
     pointer-events: none;
 }
@@ -189,7 +194,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 56px;
+    height: clamp(48px, 7vh, 64px);
     background: #B60000;
     border-radius: 12px;
     border: none;
@@ -198,7 +203,7 @@
     transition: background 0.3s;
     font-family: 'Poppins';
     font-weight: 400;
-    font-size: 16px;
+    font-size: clamp(16px, 1.2vw, 20px);
     color: #CDDBFE;
 }
 
@@ -232,7 +237,7 @@
 }
 
 .modal-body .checkbox-item span {
-    font-size: 12px;
+    font-size: clamp(12px, 1vw, 16px);
     color: #182638;
 }
 
@@ -263,8 +268,8 @@
 /* Mobile responsive */
 @media (max-width: 600px) {
     .modal-content {
-        width: 95%;
-        max-height: 95vh;
+        width: 95vw;
+        max-height: calc(100vh - 24px);
     }
 
     .modal-header {
@@ -280,7 +285,7 @@
     }
 
     .modal-body .form-row {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
