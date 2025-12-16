@@ -296,7 +296,8 @@
         flex-direction: column;
         border-radius: 20px;
         padding: 20px;
-        bottom:3rem;
+        bottom:1rem;
+        margin:0;
     }
     .stats-container{
         margin-top: 2rem;
