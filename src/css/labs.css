@@ -401,9 +401,14 @@ color: #182638;
     }
     .labs-content{
         flex-direction: column;
+        width: 100%;
     }
     .labs-img{
         display: none;
+    }
+    .labs-about{
+        padding: 0;
+        width: 100%;
     }
     .labs-values{
         flex-direction: column;
@@ -450,7 +455,7 @@ color: #182638;
         text-align: center;
     }
     .lab-item{
-        width: 90%;
+        width: 95%;
     
     }
     .lab-item img{
