@@ -52,19 +52,28 @@ training and impactful placement opportunities.`,
 
 
 const labsValues=[
-    {icon:"/assets/icons/mission.svg",
-        title:'Our Mission',
-        text:"To equip graduates and professionals with hands-on, industry-ready tech skills that bridge the gap between education and career opportunities."
+    {icon:"/assets/icons/la_tools.svg",
+        title:'Hands-On Skills',
+        text:`Our cohorts acquire hands-on 
+skills & abilities through learning
+from experts practicallly in our 
+extensive lab enviroment facilitated 
+by experienced expert instructors 
+and facilitators.`,
+        link:"To show you know............"
             },
-    {icon:"/assets/icons/vision.svg",
-        title:"Our Vision",
-        text:"To be Africa’s leading tech skills hub, empowering professionals to excel, innovate, and drive digital growth."
-    },
+    {icon:"/assets/icons/teach.svg",
+        title:"Expert Mentorship",
+        text:`Binary (Labs) has assembled a team of mentors who are veterans with a track record of designing and deploying technology products & services for successful companies across AFRICA.`,
+        link:"To teach you how............"
+    
+      },
     {
-        icon:"/assets/icons/values.svg",
-        title:"Our Values",
-        text:"We value hands-on learning, mentorship, inclusivity, industry relevance, and empowering learners to make a meaningful impact."
-
+        icon:"/assets/icons/people.svg",
+        title:"Industry Collaboration",
+        text:`Our core value is centered around 
+collaboration with Institutions and the Industry in order to collectively develop skilled technical talent with domain-specific hands-on expertise.`,
+        link:"  To challenge you further..........."
     }
 ]
 
@@ -94,6 +103,7 @@ if (valuesContainer){
             </div>
         <h3>${values.title}</h3>
         <p>${values.text}</p>
+       <span class="small"><a href="#">${values.link}</a></span>
     
         </div>`).join('');
 }

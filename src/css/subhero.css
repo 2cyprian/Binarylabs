@@ -8,7 +8,6 @@
 .sub-hero-section .container {
     width: 100%;
     margin-left: 2rem;
-    margin-bottom: 2rem;
 }
 
 .sub-hero-grid {
@@ -36,10 +35,10 @@
 }
 
 .sub-hero-text p {
-    font-size: var(--p1);
+    font-size: var(--p0);
     color: var(--primary);
     line-height: 1.6;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     max-width: 714px; /* Prevents text from stretching too wide */
 }
 
@@ -71,6 +70,7 @@
 .btn-white {
     background-color: var(--white);
     color: var(--accent);
+    border: 2px solid var(--accent);
    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
