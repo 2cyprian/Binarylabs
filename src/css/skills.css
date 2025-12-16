@@ -307,6 +307,7 @@
 
   .testimonial-image {
     width: clamp(100px, 18vw, 150px);
+
   }
 }
 
@@ -320,9 +321,9 @@
   }
   .testimonial-image {
     position: static;
-    width: min(60%, 260px);
+    width: min(40%, 200px);
     max-width: 100%;
-    align-self: flex-end;
+    align-self: center;
     margin-top: 16px;
   }
 }

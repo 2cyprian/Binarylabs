@@ -2,7 +2,6 @@
 /* --- Section Layout --- */
 .sub-hero-section {
     max-width: 1440px;
-    padding-top: auto;
     margin: 0 auto;
 }
 
@@ -102,7 +101,7 @@
 @media (max-width: 992px) {
     .sub-hero-section .container{
         margin: 0;
-        padding: 0;
+        padding-top: 4rem;
     }
     .sub-hero-grid {
         grid-template-columns: 1fr; /* Stack vertically */

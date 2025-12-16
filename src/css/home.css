@@ -200,7 +200,19 @@
       display: block;
     }
 
-   
+    /* Responsive */
+    @media (max-width: 992px) {
+      .cta-card {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 48px;
+      }
+
+      .cta-image {
+        height: 320px;
+      }
+    }
 
     @media (max-width: 640px) {
       .cta-section {
