@@ -88,7 +88,18 @@
     
 }
 
-
+@media (min-width: 1390px) {
+  .card {
+    width: 310px;
+    height: 380px;
+  }
+  .card h3 {
+    font-size: var(--h2);
+  }
+  .card p {
+    font-size: var(--p2);
+  }
+}
 
 
 /* FRONT CARD */
