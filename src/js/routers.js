@@ -5,10 +5,8 @@
 class Router {
   constructor() {
     this.routes = {
-      '/': { name: 'Home', file: 'home.html' },
+      '/': { name: 'Home', file: 'labs.html' },
       '/skills': { name: 'Skills', file: 'skills.html' },
-      '/labs': { name: 'Labs', file: 'labs.html' },
-      '/contact': { name: 'Contact', file: 'contact.html' }
     };
     this.currentPath = '/';
   }

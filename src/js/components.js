@@ -26,7 +26,6 @@ export async function initializeComponents() {
   await Promise.all([
     loadComponent('#navbar', '/src/components/navbar.html'),
     loadComponent('#footer', '/src/components/footer.html'),
-    loadComponent('#hero', '/src/components/hero.html')
   ]);
   
   // Initialize navbar toggle after components are loaded
