@@ -8,6 +8,7 @@
   --navbar-height: 80px;
   --h1:46px;
   --h2:36px;
+  --h2-small:28px;
   --h3:24px;
   --p0:20px;
   --p1:18px;
@@ -57,8 +58,8 @@ p{
 
 @media (min-width: 1920px) {
   body {
-    transform: scale(1.4);
-    width: calc(100% / 1.4);
+    transform: scale(1.5);
+    width: calc(100% / 1.5);
     margin: auto;
   }
 }

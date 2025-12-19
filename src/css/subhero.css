@@ -39,7 +39,7 @@
     color: var(--primary);
     line-height: 1.6;
     margin-bottom: 30px;
-    max-width: 714px; /* Prevents text from stretching too wide */
+    max-width: 720px; /* Prevents text from stretching too wide */
 }
 
 /* Buttons */
@@ -77,25 +77,20 @@
 /* --- Right Side: Image --- */
 .sub-hero-image  {
     width: min(40rem,90%);
-      right: 0;
+      display: flex;
+        justify-content: center;
 }
 
 .sub-hero-image img {
     height: auto;
     /* Optional: Adds a subtle glow to the image if it's a transparent PNG */
     filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.1)); 
-    animation: float 6s ease-in-out infinite; /* Gentle floating motion */
 }
 .skills-hero-image img {
     width: clamp(400px, 35vw, 500px);
 }
 
 /* Optional Floating Animation */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
 
 /* --- Responsive (Mobile) --- */
 @media (max-width: 992px) {

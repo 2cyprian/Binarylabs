@@ -39,7 +39,7 @@
     gap: 30px;
     width: max-content;
     /* Infinite Scroll Animation */
-    animation: marquee 2s linear infinite;
+    animation: marquee 4s linear infinite;
 }
 
 .marquee-track img {
