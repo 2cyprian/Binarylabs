@@ -80,8 +80,8 @@ p{
 }
 @media (min-width:2865px) {
   body {
-    transform: scale(2);
-    width: calc(100% / 1.15);
+    transform: scale(1.9);
+    width: calc(100% / 1.16);
     margin: auto;
   }
 }
