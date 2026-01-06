@@ -28,7 +28,7 @@
 }
 
  .highlight {
-        background-color:var(--text);
+        background-color:var(--accent);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
@@ -36,7 +36,7 @@
 
 .sub-hero-text p {
     font-size: var(--p0);
-    color: var(--primary);
+    color:#1F2937CC;
     line-height: 1.6;
     margin-bottom: 30px;
     max-width: 720px; /* Prevents text from stretching too wide */
@@ -52,8 +52,8 @@
     text-decoration: none;
     padding: 16px 30px;
     border-radius: 16px;
-    font-weight: 600;
-    font-size:var(--p3);
+    font-weight: 400;
+    font-size:var(--p2);
     transition: transform 0.2s ease;
     display: inline-block;
 }
@@ -66,19 +66,18 @@
     background-color: var(--accent);
     color: var(--white);
 }
-
 .btn-white {
     background-color: var(--white);
     color: var(--accent);
-    border: 2px solid var(--accent);
+    border: 1px solid var(--accent);
    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 /* --- Right Side: Image --- */
 .sub-hero-image  {
-    width: min(40rem,90%);
       display: flex;
-        justify-content: center;
+        justify-content: right;
+        margin-right: 3rem;
 }
 
 .sub-hero-image img {
@@ -87,7 +86,7 @@
     filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.1)); 
 }
 .skills-hero-image img {
-    width: clamp(400px, 35vw, 500px);
+    width: clamp(450px, 40vw, 550px);
 }
 
 /* Optional Floating Animation */

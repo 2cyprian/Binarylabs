@@ -181,7 +181,7 @@
       padding: 32px;
       min-height: 220px;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       justify-content: space-between;
       justify-content: center;
       overflow: hidden;

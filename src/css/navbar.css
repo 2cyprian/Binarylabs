@@ -10,7 +10,7 @@ body { font-family: var(--font-family); }
 
 .navbar {
     background-color:transparent;
-      max-width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding:0 20px;
     position: relative;
@@ -66,9 +66,9 @@ body { font-family: var(--font-family); }
 }
 
 .nav-links a {
-    color: var(--text);
+    color: var(--accent);
     text-decoration: none;
-    font-size: var(--p1);
+    font-size: var(--p0);
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -87,7 +87,7 @@ body { font-family: var(--font-family); }
     color:var(--text); /* Dark text for contrast */
     padding: 10px 24px;
     border-radius: 26px;
-    border: 2px solid var(--text);
+    border: 2px solid var(--accent);
     font-weight: 600;
     font-size: 14px;
     text-decoration: none;
