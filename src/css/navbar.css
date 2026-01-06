@@ -75,11 +75,11 @@ body { font-family: var(--font-family); }
     transition: color 0.3s ease;
 }
 
-.nav-links a.active{
+.nav-link.active{
     border-bottom: 2px solid var(--accent);
 }
 
-.nav-links a:hover{
+.nav-links:hover{
     color: var(--accent);
 }
 

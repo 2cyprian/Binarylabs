@@ -57,6 +57,22 @@ function initializeNavbar() {
   });
 }
 
+// Update active link based on current page
+function updateActiveLink() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (currentPath === href || (currentPath === '/' && href === '/')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
+
 // Load footer component
 async function loadFooter() {
   try {
