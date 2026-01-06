@@ -101,6 +101,7 @@ width: 95%;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
     display: grid;
+    margin-left: 3rem;
 
 
 }
@@ -248,8 +249,8 @@ width: 95%;
 }
 
 /* our story and expertise */
-.story-container
-{ max-width: 1440px;
+.story-container .container{ 
+    max-width: 1440px;
     margin: 0 auto;
     padding: 2rem 0; 
 
@@ -271,7 +272,7 @@ width: 95%;
 .experts-section{
     background-color: #CDDBFE;
     padding: 1rem;
-    width: 90%;
+    width: 92%;
 }
 .stat-row{
     display: flex;
@@ -309,7 +310,7 @@ width: 95%;
     /* Rectangle 24 */
 background: linear-gradient(270deg, #182638 0%, #446B9E 100%);
 border-radius: 16px;
-width: 90%;
+width: 92%;
 height: auto;
 
 
