@@ -16,12 +16,12 @@
     }
 
     h4{
-      font-size:18px;
+      font-size:var(--h3);
       font-weight:400;
     }
 
     .stack p, a{
-      font-size:14px;
+      font-size:var(--p2);
       line-height:1.6;
       color:var(--white);
       text-decoration:none;
