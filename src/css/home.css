@@ -38,7 +38,7 @@
     align-items: center; /* Vertically centers the line with text */
     gap: 15px;           /* Space between line and text */
     
-    font-size: var(--h3);     /* Adjust size as needed */
+    font-size: var(--h2-small);     /* Adjust size as needed */
     font-weight: 700;    /* Bold font */
     color: var(--primary);
     margin-bottom: 0.9rem;

@@ -14,6 +14,7 @@
 }
 .overview .lined-heading{
     justify-content: center;
+    font-size: var(--h2-small);
 }
 
 .overview .container{
@@ -29,7 +30,8 @@
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
     color: var(--primary);
-    font-size: var(--p1);
+    font-size: var(--p2);
+    width: 90%;
     line-height: 1.2;
     text-align: justify;
 }
@@ -156,18 +158,18 @@
     }
 
     .section-label h2 {
-      font-size: var(--h3);
+      font-size: var(--h2-small);
       font-weight: 700;
     }
 
     .section-title {
-      font-size: var(--h3);
+      font-size: var(--h2-small);
       font-weight: 700;
       margin-bottom: 12px;
     }
 
     .section-description {
-      font-size: var(--p1);
+      font-size: var(--p2);
       line-height: 1.6;
       color: var(--primary);
       max-width: 620px;
@@ -197,14 +199,14 @@
     .testimonial-author {
       margin-top: 24px;
       font-weight: 700;
-      font-size: var(--p1);
+      font-size: var(--p2);
       color: #ffffff;
     }
 
     .testimonial-role {
         color: aliceblue;
       font-weight: 400;
-      font-size: var(--p3);
+      font-size: var(--p2);
       padding: 0.5rem;
       opacity: 0.85;
     }
