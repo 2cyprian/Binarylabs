@@ -78,6 +78,13 @@ p{
     margin: auto;
   }
 }
+@media (min-width:2865px) {
+  body {
+    transform: scale(2);
+    width: calc(100% / 2);
+    margin: auto;
+  }
+}
 
 @media (min-width: 3700px) {
   body {
