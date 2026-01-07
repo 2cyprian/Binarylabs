@@ -70,7 +70,7 @@ body { font-family: var(--font-family); }
 .nav-links a {
     color: var(--accent);
     text-decoration: none;
-    font-size: var(--h3);
+    font-size: var(--p2);
     font-weight: 500;
     transition: color 0.3s ease;
 }
