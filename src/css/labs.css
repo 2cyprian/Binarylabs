@@ -213,6 +213,7 @@ width: 95%;
 .socials-icons{
     gap: 2rem;
     display: flex;
+    justify-content: center;
 }
 .socials-icons i{
     margin-top: 1rem;

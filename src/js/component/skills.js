@@ -45,25 +45,17 @@ for employability and operating IP network with single ISP provider connectivity
 
 // --- 2. TEMPLATE (Matches your existing CSS classes) ---
 const OverviewCardTemplate = (item, index) => `
-    <!-- Changed div to 'a' to make it clickable, added inline style to reset link colors -->
-        <div class="overview-item"  id="card-template">
-        <!-- Decorative Back Card -->
-      
-        
-   
-        <div class="card  ${index % 2 === 0 ? 'border-bottom' : 'border-top'}">
+    <div class="overview-item" id="card-template">
+        <div class="card border-bottom">
             <span class="card-icon">
-            <img src="${item.icon}" alt="${item.title} icon">
+                <img src="${item.icon}" alt="${item.title} icon">
+            <h3>${item.title}</h3>
 
             </span>
-            <h3>${item.title}</h3>
             <p>${item.desc}</p>
-    <a href="" class="overview-link">${item.link}</a>
-
+            <a href="" class="overview-link">${item.link}</a>
         </div>
-        </div>
-        
-    
+    </div>
 `;
 
 // --- 3. INITIALIZE ---
